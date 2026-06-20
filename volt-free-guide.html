@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VOLT — Free Training Guide · دليل تدريب مجاني</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --base:#0A0A0B;--surface:#141417;--line:#2A2A30;
+    --volt:#C6FF00;--heat:#FF2D55;--bone:#F5F5F4;--muted:#9A9A9E;--maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--base);color:var(--bone);font-family:"Inter",system-ui,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .ar{font-family:"Noto Kufi Arabic",sans-serif;direction:rtl}
+  .eyebrow{font-family:"Archivo";font-weight:800;font-size:.7rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--volt)}
+  h2{font-family:"Anton";text-transform:uppercase;line-height:.95;font-size:clamp(2rem,5.5vw,3.6rem)}
+  h2 .ar{display:block;font-family:"Noto Kufi Arabic";font-weight:800;font-size:.5em;color:var(--muted);
+    text-transform:none;margin-top:8px;letter-spacing:0}
+  :focus-visible{outline:3px solid var(--volt);outline-offset:3px}
+  .pill{display:inline-block;font-family:"Archivo";font-weight:800;font-size:.58rem;letter-spacing:.14em;
+    text-transform:uppercase;padding:5px 9px;border-radius:2px}
+  .pill.free{background:var(--volt);color:#0A0A0B}
+  .pill.home{background:transparent;border:1px solid var(--line);color:var(--muted)}
+  .pill.gym{background:rgba(255,45,85,.15);color:var(--heat);border:1px solid rgba(255,45,85,.4)}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+    background:rgba(10,10,11,.78);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:"Anton";font-size:1.4rem;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+  .brand .spark{width:11px;height:11px;background:var(--volt);transform:skewX(-12deg);box-shadow:0 0 14px var(--volt)}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{font-family:"Archivo";font-weight:600;font-size:.8rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--bone)}
+  .printbtn{font-family:"Archivo";font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--volt);color:#0A0A0B;border:none;padding:10px 16px;border-radius:3px;cursor:pointer}
+  .burger{display:none;background:none;border:none;color:var(--bone);font-size:1.5rem;cursor:pointer}
+
+  .hero{padding:56px 0 32px}
+  .hero h1{font-family:"Anton";text-transform:uppercase;font-size:clamp(2.4rem,8vw,5.4rem);
+    line-height:.88;margin:16px 0}
+  .hero h1 .v{color:var(--volt)}
+  .hero .sub{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  .hero p{max-width:48ch;color:var(--muted);font-size:1.05rem}
+  .hero .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+
+  .toggle{position:sticky;top:64px;z-index:40;background:rgba(10,10,11,.92);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0}
+  .toggle .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .toggle .label{font-family:"Archivo";font-weight:700;font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted)}
+  .switch{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .switch button{font-family:"Archivo";font-weight:800;font-size:.78rem;letter-spacing:.05em;
+    text-transform:uppercase;padding:10px 18px;background:transparent;color:var(--muted);border:none;cursor:pointer}
+  .switch button[aria-pressed="true"]{background:var(--volt);color:#0A0A0B}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .sec-head{margin-bottom:30px}
+  .sec-head p{color:var(--muted);margin-top:12px;max-width:62ch}
+  .sec-head p.ar{margin-top:6px}
+
+  .warm{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .warm .item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+  .warm .item .n{font-family:"Anton";font-size:1.6rem;color:var(--volt);line-height:1}
+  .warm .item h4{font-family:"Archivo";font-weight:800;font-size:.98rem;margin:8px 0 4px}
+  .warm .item .ar{color:var(--muted);font-size:.92rem;font-weight:600}
+  .warm .item .t{color:var(--heat);font-family:"Archivo";font-weight:700;font-size:.78rem;margin-top:8px}
+
+  .ex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .ex{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;break-inside:avoid}
+  .ex .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
+  .ex h3{font-family:"Archivo";font-weight:900;text-transform:uppercase;font-size:1.15rem;letter-spacing:.02em}
+  .ex h3 .ar{display:block;font-family:"Noto Kufi Arabic";font-weight:700;font-size:.78rem;color:var(--volt);
+    text-transform:none;margin-top:2px}
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+  .panels.single{grid-template-columns:1fr}
+  .panel{background:#0E0E10;border:1px solid var(--line);border-radius:8px;padding:6px;position:relative}
+  .panel .plabel{position:absolute;top:8px;left:8px;font-family:"Archivo";font-weight:800;font-size:.6rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .panel .plabel .ar{display:inline;color:var(--volt);margin-right:4px}
+  .panel svg{width:100%;height:auto;display:block}
+  .fig-start{color:var(--bone)}
+  .fig-end{color:var(--volt)}
+  .ex .cue{font-size:.9rem;color:var(--bone);margin-top:4px}
+  .ex .cue.ar{color:var(--muted);font-size:.92rem;margin-top:6px}
+
+  .lvl{display:none}.lvl.show{display:block}
+  .week{background:var(--surface);border:1px solid var(--line);border-radius:8px;margin-bottom:14px;overflow:hidden;break-inside:avoid}
+  .week>summary{cursor:pointer;list-style:none;padding:16px 20px;display:flex;justify-content:space-between;
+    align-items:center;gap:10px;font-family:"Archivo";font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+  .week>summary::-webkit-details-marker{display:none}
+  .week>summary::after{content:"+";color:var(--volt);font-size:1.3rem}
+  .week[open]>summary::after{content:"–"}
+  .week>summary .ar{font-family:"Noto Kufi Arabic";font-weight:700;text-transform:none;color:var(--volt);font-size:.8rem}
+  .day{padding:0 20px 16px}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:"Archivo";font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  th .ar{display:block;color:var(--volt);font-weight:700}
+  td .sets{color:var(--volt);font-weight:600;white-space:nowrap}
+  td .ar{color:var(--muted);display:block;font-size:.84rem}
+
+  .principles{display:grid;gap:12px;margin-bottom:18px}
+  .principle{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 20px;break-inside:avoid}
+  .principle h3{font-family:"Archivo";font-weight:800;font-size:1rem;margin-bottom:4px}
+  .principle h3 .ar{font-family:"Noto Kufi Arabic";font-weight:700;color:var(--volt);font-size:.82rem;margin-right:6px}
+  .principle p{color:var(--muted);font-size:.92rem}
+  .principle p.ar{margin-top:4px}
+  .principle .k{color:var(--volt)}
+
+  .tracker{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;overflow-x:auto}
+  .tracker table{min-width:600px}
+  .tracker input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);
+    color:var(--bone);font-family:"Inter";font-size:.88rem;padding:6px 2px}
+  .tracker input:focus{outline:none;border-bottom-color:var(--volt)}
+  .tracker th{white-space:nowrap}
+
+  .glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .term{background:var(--surface);padding:16px 18px}
+  .term dt{font-family:"Archivo";font-weight:800;text-transform:uppercase;font-size:.9rem}
+  .term dt .ar{font-family:"Noto Kufi Arabic";color:var(--volt);text-transform:none;margin-right:6px;font-size:.82rem}
+  .term dd{color:var(--muted);font-size:.88rem;margin-top:5px}
+  .term dd.ar{margin-top:3px}
+
+  .safety{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+  .safety ul{list-style:none;display:grid;gap:14px;margin-top:6px}
+  .safety li{padding-left:22px;position:relative;color:var(--bone)}
+  .safety li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:2px;background:var(--volt)}
+  .safety li .ar{display:block;color:var(--muted);font-size:.9rem;margin-top:3px}
+  .disclaim{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+  .disclaim .ar{margin-top:6px}
+
+  footer{padding:36px 0;color:var(--muted);font-size:.84rem;text-align:center}
+  footer .spark{display:inline-block;width:10px;height:10px;background:var(--volt);transform:skewX(-12deg);margin-right:6px}
+
+  @media(max-width:820px){
+    .warm,.ex-grid,.glossary,.calc{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .burger{display:block}
+  }
+
+  .mlist{list-style:none;margin-top:10px;display:grid;gap:8px}
+  .mlist li{font-size:.9rem;color:var(--bone);padding-left:18px;position:relative}
+  .mlist li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:2px;background:var(--volt)}
+  .mlist li .ar{color:var(--muted);display:block;font-size:.84rem}
+  .tier-tag{font-family:"Archivo";font-weight:800;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--heat)}
+  .note{color:var(--muted);font-size:.86rem;margin-top:14px}
+  .note.ar{margin-top:4px}
+  .fig-motion{display:none}
+  body.animate .fig-static{display:none}
+  body.animate .fig-motion{display:block}
+  .motion svg{width:100%;height:auto;display:block}
+  .bodyfig{background:#0E0E10;border:1px solid var(--line);border-radius:8px;padding:10px;margin:10px 0}
+  .bodyfig svg{width:100%;max-width:130px;height:auto;display:block;margin:0 auto}
+  .bt-label{font-family:"Archivo";font-weight:700;font-size:.72rem;letter-spacing:.06em;color:var(--heat);margin-top:8px}
+  .bt-tip{color:var(--bone);font-size:.9rem;margin-top:10px}
+  .bt-tip.ar{color:var(--muted);font-size:.9rem;margin-top:4px}
+  .lib{display:grid;gap:12px}
+  details.libgroup{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;break-inside:avoid}
+  details.libgroup>summary{cursor:pointer;list-style:none;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-family:"Archivo";font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+  details.libgroup>summary::-webkit-details-marker{display:none}
+  details.libgroup>summary::after{content:"+";color:var(--volt);font-size:1.3rem}
+  details.libgroup[open]>summary::after{content:"–"}
+  details.libgroup>summary .ar{font-family:"Noto Kufi Arabic";font-weight:700;text-transform:none;color:var(--volt);font-size:.82rem}
+  details.libgroup>summary .cnt{font-family:"Archivo";font-weight:700;font-size:.62rem;letter-spacing:.1em;color:var(--muted);margin-left:auto;margin-right:10px}
+  .libbody{padding:0 20px 16px;display:grid;gap:11px}
+  .libx{border-bottom:1px solid var(--line);padding-bottom:11px;display:flex;gap:12px;align-items:flex-start}
+  .libx:last-child{border-bottom:none;padding-bottom:0}
+  .libfig{flex:0 0 72px;width:72px;background:#0E0E10;border:1px solid var(--line);border-radius:6px;padding:3px}
+  .libfig .motion svg{width:100%;height:auto;display:block}
+  .libtext{flex:1;min-width:0}
+  .libx-main{font-family:"Archivo";font-weight:700;font-size:.96rem}
+  .libx-main .ar{font-family:"Noto Kufi Arabic";color:var(--volt);font-weight:700;font-size:.84rem;margin-right:8px}
+  .libx-alt{color:var(--muted);font-size:.86rem;margin-top:4px}
+  .libx-alt .altlabel{font-family:"Archivo";font-weight:700;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--heat);margin-right:6px}
+  .animbtn{font-family:"Archivo";font-weight:800;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;
+    background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:10px 16px;cursor:pointer}
+  .animbtn[aria-pressed="true"]{background:var(--heat);color:#fff;border-color:var(--heat)}
+
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  .calc-form{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:12px}
+  .calc-form .field{display:grid;gap:5px}
+  .calc-form label{font-family:"Archivo";font-weight:700;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .calc-form label .ar{color:var(--volt);margin-right:6px}
+  .calc-form input,.calc-form select{background:#0E0E10;border:1px solid var(--line);border-radius:5px;color:var(--bone);
+    font-family:"Inter";font-size:.95rem;padding:10px;width:100%}
+  .calc-form input:focus,.calc-form select:focus{outline:none;border-color:var(--volt)}
+  .calc-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .calc-go{font-family:"Archivo";font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--volt);
+    color:#0A0A0B;border:none;border-radius:5px;padding:13px;cursor:pointer;font-size:.82rem;margin-top:4px}
+  .calc-out{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;min-height:120px}
+  .calc-out .lead{font-family:"Archivo";font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .calc-out .big{font-family:"Anton";font-size:2.8rem;color:var(--volt);line-height:1;margin:4px 0 14px}
+  .calc-out .big small{font-family:"Inter";font-size:.9rem;color:var(--muted);font-weight:500}
+  .macro-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .macro-row:last-child{border-bottom:none}
+  .macro-row .lab .ar{color:var(--muted);font-size:.82rem;margin-left:6px}
+  .macro-row .g{color:var(--volt);font-family:"Archivo";font-weight:800}
+  .calc-empty{color:var(--muted);font-size:.92rem}
+
+  @media print{
+    @page{margin:14mm}
+    body{background:#fff;color:#111;overflow:visible}
+    header,.toggle,.burger,.printbtn,.nav-right{display:none!important}
+    section{border-color:#ccc;padding:18px 0;break-inside:avoid}
+    .ex,.week,.principle,.term,.safety,.tracker,.warm .item,.panel{background:#fff!important;border-color:#bbb!important}
+    h2,.brand,.hero h1{color:#111!important}
+    h2 .ar,.sec-head p,.principle p,.term dd,.warm .item .ar{color:#333!important}
+    .fig-start,.fig-end{color:#111!important}
+    .fig-motion{display:none!important}
+    body.animate .fig-static{display:block!important}
+    .calc-go,.animbtn{display:none!important}
+    details.libgroup>summary::after{content:""!important}
+    details.libgroup:not([open])>.libbody{display:grid!important}
+    .lvl{display:block!important}
+    .week>summary::after{content:""}
+    .week .day{display:block!important}
+    a{color:#111}
+    .pill.free{background:#111;color:#fff}
+    .tracker input{border-bottom:1px solid #999}
+    .ex h3 .ar,.week>summary .ar,th .ar,.term dt .ar,.principle h3 .ar,.panel .plabel .ar{color:#111!important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="spark"></span>VOLT</a>
+    <div class="nav-right">
+      <nav class="nav-links" id="menu">
+        <a href="#warmup">Warm-up</a>
+        <a href="#foundations">Exercises</a>
+        <a href="#muscles">Muscles</a>
+        <a href="#library">Library</a>
+        <a href="#bodytypes">Body types</a>
+        <a href="#plans">Plans</a>
+        <a href="#nutrition">Nutrition</a>
+        <a href="#calc">Calculator</a>
+        <a href="#tracker">Tracker</a>
+        <a href="#glossary">Glossary</a>
+      </nav>
+      <button class="printbtn" onclick="window.print()">Print / Save PDF · اطبع</button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="border-bottom:none">
+    <div class="wrap">
+      <span class="eyebrow">Free training guide · no gym required &nbsp;|&nbsp; <span class="ar">دليل تدريب مجاني · من غير جيم</span></span>
+      <h1>Get strong,<br><span class="v">no excuses.</span></h1>
+      <div class="sub">
+        <p>A free, bilingual guide for beginners and advanced trainees. Every exercise shows the start and end position, with a home option and a gym option. Pick your level, warm up, and go.</p>
+        <p class="ar" dir="rtl">دليل مجاني بالعربي والإنجليزي للمبتدئين والمتقدمين. كل تمرين موضّح بصورة للبداية والنهاية، وفيه نسخة للبيت ونسخة للجيم. اختار مستواك، سخّن، ويلا نبدأ.</p>
+      </div>
+      <div class="badges">
+        <span class="pill free">100% Free · مجاني</span>
+        <span class="pill home">Home · للبيت</span>
+        <span class="pill gym">Gym optional · الجيم اختياري</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="toggle">
+    <div class="wrap">
+      <span class="label">Level · المستوى</span>
+      <div class="switch" role="group" aria-label="Choose level">
+        <button id="b-beg" aria-pressed="true">Beginner · مبتدئ</button>
+        <button id="b-adv" aria-pressed="false">Advanced · متقدم</button>
+      </div>
+      <button class="animbtn" id="b-anim" aria-pressed="false">▶ Animate · حرّك</button>
+    </div>
+  </div>
+
+  <section id="warmup">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Before you start · قبل ما تبدأ</span>
+        <h2>5-minute warm-up<span class="ar">إحماء ٥ دقايق</span></h2>
+        <p>Never skip it. A quick warm-up wakes up the muscles and joints so you move better and get hurt less.</p>
+        <p class="ar" dir="rtl">متعدّيهوش أبداً. الإحماء السريع بيفوّق العضلات والمفاصل، فتتحرك أحسن وتتصاب أقل.</p>
+      </div>
+      <div class="warm" id="warm"></div>
+    </div>
+  </section>
+
+  <section id="foundations">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The movements · الحركات</span>
+        <h2>Start &amp; end positions<span class="ar">وضع البداية والنهاية</span></h2>
+        <p>The grey figure is the start; the green figure is the end. Learn the pattern and you can train it at home or in the gym.</p>
+        <p class="ar" dir="rtl">الشكل الرمادي هو البداية، والأخضر هو النهاية. لو فهمت الحركة تقدر تعملها في البيت أو في الجيم.</p>
+      </div>
+      <div class="ex-grid" id="exGrid"></div>
+    </div>
+  </section>
+
+  <section id="muscles">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Muscle map · خريطة العضلات</span>
+        <h2>What to train,<br>and with what<span class="ar">كل عضلة وأحسن تمارينها</span></h2>
+        <p>The main muscle groups and the moves that build them. Each has a home option and a gym option — written in plain terms, not pulled from any book.</p>
+        <p class="ar" dir="rtl">المجموعات العضلية الأساسية وأحسن تمارين تبنيها. كل واحدة ليها نسخة للبيت ونسخة للجيم.</p>
+      </div>
+      <div class="ex-grid" id="muscleGrid"></div>
+    </div>
+  </section>
+
+  <!-- EXERCISE LIBRARY -->
+  <section id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Full reference · مرجع كامل</span>
+        <h2>Exercise library<br>&amp; alternatives<span class="ar">مكتبة التمارين والبدائل</span></h2>
+        <p>Every major movement per muscle group, each with swap-in alternatives (home, machine, cable, or band) so you can always train around your equipment. Tap a group to open it.</p>
+        <p class="ar" dir="rtl">كل حركة أساسية لكل عضلة، وكل واحدة ليها بدائل (بيت، أجهزة، كابل، أو مطاط) علشان تقدر تتمرّن بأي معدات. اضغط على المجموعة علشان تفتحها.</p>
+      </div>
+      <div class="lib" id="libGrid"></div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Your plan · برنامجك</span>
+        <h2>Follow it<span class="ar">اتبع الخطة</span></h2>
+        <p>Each set leaves 1–2 reps in the tank. "RPE" = how hard it felt (see glossary).</p>
+        <p class="ar" dir="rtl">سيب ١ أو ٢ عدة في كل مجموعة. "RPE" يعني صعوبة المجموعة (شوف القاموس).</p>
+      </div>
+
+      <div class="lvl show" id="lvl-beg">
+        <details class="week" open>
+          <summary><span>Weeks 1–2 · Learn the moves <span class="ar">أسبوع ١–٢ · اتعلّم الحركات</span></span><span class="pill free">3×/wk</span></summary>
+          <div class="day">
+            <table>
+              <thead><tr><th>Movement<span class="ar">الحركة</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Notes<span class="ar">ملاحظات</span></th></tr></thead>
+              <tbody>
+                <tr><td>Goblet squat → back squat<span class="ar">سكوات</span></td><td class="sets">3 × 8</td><td>Light, full depth<span class="ar">خفيف، نزول كامل</span></td></tr>
+                <tr><td>Push-up (incline ok) → bench<span class="ar">ضغط</span></td><td class="sets">3 × 6–10</td><td>Full range<span class="ar">مدى كامل</span></td></tr>
+                <tr><td>Backpack row → dumbbell row<span class="ar">تجديف</span></td><td class="sets">3 × 10</td><td>Squeeze back<span class="ar">اعصر الضهر</span></td></tr>
+                <tr><td>Hip hinge → RDL<span class="ar">رفعة رومانية</span></td><td class="sets">3 × 8</td><td>Flat back<span class="ar">ضهر مفرود</span></td></tr>
+                <tr><td>Plank<span class="ar">بلانك</span></td><td class="sets">3 × 20–30s</td><td>Brace hard<span class="ar">ثبّت بطنك</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="week">
+          <summary><span>Weeks 3–4 · Add load <span class="ar">أسبوع ٣–٤ · زوّد الوزن</span></span><span class="pill free">3×/wk</span></summary>
+          <div class="day">
+            <table>
+              <thead><tr><th>Movement<span class="ar">الحركة</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Notes<span class="ar">ملاحظات</span></th></tr></thead>
+              <tbody>
+                <tr><td>Paused squat<span class="ar">سكوات بوقفة</span></td><td class="sets">3 × 10</td><td>2-sec pause<span class="ar">ثبات ٢ ثانية</span></td></tr>
+                <tr><td>Push-up → bench<span class="ar">ضغط</span></td><td class="sets">3 × 8–12</td><td>+1 rep<span class="ar">زوّد عدة</span></td></tr>
+                <tr><td>Row<span class="ar">تجديف</span></td><td class="sets">3 × 12</td><td>Heavier<span class="ar">أتقل</span></td></tr>
+                <tr><td>Split squat → lunge<span class="ar">طعنة</span></td><td class="sets">3 × 8/leg</td><td>Single-leg<span class="ar">رجل واحدة</span></td></tr>
+                <tr><td>RDL<span class="ar">رفعة رومانية</span></td><td class="sets">3 × 10</td><td>Control down<span class="ar">انزل بالراحة</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <p style="color:var(--muted);font-size:.9rem">After 4 weeks, add a rep or a little weight whenever a set feels easy. <span class="ar" dir="rtl">بعد ٤ أسابيع، زوّد عدة أو شوية وزن لما المجموعة تبقى سهلة.</span></p>
+      </div>
+
+      <div class="lvl" id="lvl-adv">
+        <div class="principles">
+          <div class="principle"><h3><span class="ar">الزيادة التدريجية ·</span> Progressive overload</h3><p>Your levers: <span class="k">more reps, sets, slower tempo, shorter rest, better range, or frequency.</span> Push one per block.</p><p class="ar" dir="rtl">أدواتك: عدات أكتر، مجموعات أكتر، إيقاع أبطأ، راحة أقل، مدى أحسن، أو تكرار أكتر. ركّز على واحدة كل فترة.</p></div>
+          <div class="principle"><h3><span class="ar">شدة التمرين ·</span> Intensity (RIR)</h3><p>Keep working sets at <span class="k">1–3 reps in reserve.</span> Save failure for the last isolation set.</p><p class="ar" dir="rtl">خلّي مجموعاتك على ١–٣ عدات احتياطي. سيب الفشل التام لآخر مجموعة عزل.</p></div>
+          <div class="principle"><h3><span class="ar">التدرّج الأسبوعي ·</span> Periodize</h3><p><span class="k">3 weeks building, 1 deload week.</span> Track lifts so you know it's moving.</p><p class="ar" dir="rtl">٣ أسابيع بناء، وأسبوع تخفيف. سجّل أوزانك علشان تتأكد إنك بتتقدّم.</p></div>
+          <div class="principle"><h3><span class="ar">الحجم الأسبوعي ·</span> Weekly volume</h3><p>Aim for <span class="k">10–20 hard sets per muscle / week.</span> Adjust to recovery.</p><p class="ar" dir="rtl">استهدف ١٠–٢٠ مجموعة قوية لكل عضلة في الأسبوع، واظبطها على استشفائك.</p></div>
+        </div>
+        <details class="week" open>
+          <summary><span>Sample split · Upper / Lower <span class="ar">تقسيمة · علوي / سفلي</span></span><span class="pill free">4×/wk</span></summary>
+          <div class="day">
+            <table>
+              <thead><tr><th>Upper day<span class="ar">يوم علوي</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Target<span class="ar">الهدف</span></th></tr></thead>
+              <tbody>
+                <tr><td>Bench / weighted push-up<span class="ar">بنش / ضغط بوزن</span></td><td class="sets">4 × 5–8</td><td>RIR 2</td></tr>
+                <tr><td>Row / pull-up<span class="ar">تجديف / عقلة</span></td><td class="sets">4 × 6–10</td><td>RIR 2</td></tr>
+                <tr><td>Overhead press<span class="ar">ضغط كتف</span></td><td class="sets">3 × 8–12</td><td>RIR 1–2</td></tr>
+                <tr><td>Curl + triceps superset<span class="ar">باي + تراي</span></td><td class="sets">3 × 12–15</td><td>RIR 1</td></tr>
+              </tbody>
+            </table>
+            <table style="margin-top:14px">
+              <thead><tr><th>Lower day<span class="ar">يوم سفلي</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Target<span class="ar">الهدف</span></th></tr></thead>
+              <tbody>
+                <tr><td>Squat<span class="ar">سكوات</span></td><td class="sets">4 × 5–8</td><td>RIR 2</td></tr>
+                <tr><td>RDL / single-leg hinge<span class="ar">رفعة رومانية</span></td><td class="sets">3 × 8–10</td><td>RIR 2</td></tr>
+                <tr><td>Bulgarian split squat<span class="ar">طعنة بلغارية</span></td><td class="sets">3 × 10/leg</td><td>RIR 1–2</td></tr>
+                <tr><td>Carry + calf raise<span class="ar">حمل + سمانة</span></td><td class="sets">3 × 30–45s</td><td>Hard</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="week">
+          <summary><span>Push / Pull / Legs <span class="ar">دفع / سحب / أرجل</span></span><span class="pill free">3 or 6×/wk</span></summary>
+          <div class="day">
+            <h4>Push — chest · shoulders · triceps <span class="ar">دفع</span></h4>
+            <table>
+              <thead><tr><th>Movement<span class="ar">الحركة</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Target<span class="ar">الهدف</span></th></tr></thead>
+              <tbody>
+                <tr><td>Bench / weighted push-up<span class="ar">بنش / ضغط بوزن</span></td><td class="sets">4 × 6–10</td><td>RIR 2</td></tr>
+                <tr><td>Overhead press / pike push-up<span class="ar">ضغط كتف</span></td><td class="sets">3 × 8–12</td><td>RIR 2</td></tr>
+                <tr><td>Incline press / incline push-up<span class="ar">ضغط مايل</span></td><td class="sets">3 × 8–12</td><td>RIR 2</td></tr>
+                <tr><td>Lateral raise<span class="ar">رفرفة جانبية</span></td><td class="sets">3 × 12–15</td><td>RIR 1</td></tr>
+                <tr><td>Triceps dip / pushdown<span class="ar">تراي</span></td><td class="sets">3 × 10–15</td><td>RIR 1</td></tr>
+              </tbody>
+            </table>
+            <h4>Pull — back · biceps · rear delts <span class="ar">سحب</span></h4>
+            <table>
+              <thead><tr><th>Movement<span class="ar">الحركة</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Target<span class="ar">الهدف</span></th></tr></thead>
+              <tbody>
+                <tr><td>Pull-up / lat pulldown<span class="ar">عقلة / سحب أمامي</span></td><td class="sets">4 × 6–10</td><td>RIR 2</td></tr>
+                <tr><td>Bent-over row<span class="ar">تجديف بار</span></td><td class="sets">4 × 8–12</td><td>RIR 2</td></tr>
+                <tr><td>One-arm row<span class="ar">تجديف بإيد</span></td><td class="sets">3 × 10–12</td><td>RIR 1–2</td></tr>
+                <tr><td>Rear-delt raise<span class="ar">رفرفة خلفية</span></td><td class="sets">3 × 12–15</td><td>RIR 1</td></tr>
+                <tr><td>Curl<span class="ar">باي</span></td><td class="sets">3 × 10–15</td><td>RIR 1</td></tr>
+              </tbody>
+            </table>
+            <h4>Legs — quads · hams · glutes · calves <span class="ar">أرجل</span></h4>
+            <table>
+              <thead><tr><th>Movement<span class="ar">الحركة</span></th><th>Sets×reps<span class="ar">مجموعات×عدات</span></th><th>Target<span class="ar">الهدف</span></th></tr></thead>
+              <tbody>
+                <tr><td>Squat<span class="ar">سكوات</span></td><td class="sets">4 × 5–8</td><td>RIR 2</td></tr>
+                <tr><td>Romanian deadlift<span class="ar">رفعة رومانية</span></td><td class="sets">3 × 8–10</td><td>RIR 2</td></tr>
+                <tr><td>Split squat / leg press<span class="ar">طعنة / مكبس</span></td><td class="sets">3 × 10/leg</td><td>RIR 1–2</td></tr>
+                <tr><td>Leg curl / Nordic<span class="ar">ثني الرجل</span></td><td class="sets">3 × 10–12</td><td>RIR 1</td></tr>
+                <tr><td>Calf raise<span class="ar">سمانة</span></td><td class="sets">4 × 12–20</td><td>Hard</td></tr>
+              </tbody>
+            </table>
+            <p style="color:var(--muted);font-size:.86rem;margin-top:12px">Run as 3 days (PPL) or 6 days (PPL ×2) for more volume. <span class="ar" dir="rtl">اعملها ٣ أيام، أو ٦ أيام (مرتين) للمتقدمين علشان حجم أكبر.</span></p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED TECHNIQUES -->
+  <section id="techniques">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Push harder · شدّة أعلى</span>
+        <h2>Advanced techniques<span class="ar">تقنيات متقدمة</span></h2>
+        <p>Tools for experienced lifters to add stimulus without endless extra sets. Use them on the last set or two, not everything.</p>
+        <p class="ar" dir="rtl">أدوات للمتقدمين تزوّد التحفيز من غير مجموعات لا تنتهي. استخدمها في آخر مجموعة أو اتنين، مش في كل حاجة.</p>
+      </div>
+      <div class="principles" id="advTech"></div>
+    </div>
+  </section>
+
+  <!-- BODY TYPES -->
+  <section id="bodytypes">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Know your build · اعرف جسمك</span>
+        <h2>Body types<span class="ar">أنواع الجسم</span></h2>
+        <p>A loose way to describe your natural build. Most people are a mix, and it isn't your destiny — anyone can build muscle and get lean with the right plan. Use it only to tweak your starting point.</p>
+        <p class="ar" dir="rtl">طريقة تقريبية توصف بنية جسمك الطبيعية. أغلب الناس خليط، ومش مصير محتوم — أي حد يقدر يبني عضل وينشّف بالخطة الصح. استخدمها بس علشان تظبط نقطة البداية.</p>
+      </div>
+      <div class="ex-grid" id="bodyGrid"></div>
+      <p class="note">These are tendencies, not rules — your results come from consistency, not your type.<span class="ar" dir="rtl" style="display:block">دي ميول مش قواعد — نتيجتك بتيجي من الاستمرار مش من نوعك.</span></p>
+    </div>
+  </section>
+
+  <!-- NUTRITION -->
+  <section id="nutrition">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Fuel · التغذية</span>
+        <h2>Eat for the work<span class="ar">كُل علشان تتمرّن</span></h2>
+        <p>Training is the stimulus; food and sleep are where you actually grow. General principles below — a dietitian can tailor numbers to you.</p>
+        <p class="ar" dir="rtl">التمرين هو التحفيز، والأكل والنوم هما اللي بيكبّروك فعلاً. دي مبادئ عامة، وأخصائي تغذية يقدر يظبط الأرقام عليك.</p>
+      </div>
+      <div class="principles" id="nutri"></div>
+      <p class="note">Rough guide, not a prescription. With any health condition or medication, check with a doctor or dietitian first.<span class="ar" dir="rtl" style="display:block">دليل تقريبي مش روشتة. لو عندك أي حالة صحية أو بتاخد دوا، استشير دكتور أو أخصائي تغذية الأول.</span></p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calc">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Run the numbers · احسب أرقامك</span>
+        <h2>Calorie &amp; macro<br>calculator<span class="ar">حاسبة السعرات والماكروز</span></h2>
+        <p>Estimate your daily calories and protein / carbs / fat for your goal. Uses the Mifflin-St Jeor equation — a standard, widely-used formula.</p>
+        <p class="ar" dir="rtl">احسب سعراتك اليومية والبروتين والكارب والدهون حسب هدفك. بيستخدم معادلة Mifflin-St Jeor المعروفة.</p>
+      </div>
+      <div class="calc">
+        <div class="calc-form">
+          <div class="field"><label>Sex <span class="ar">النوع</span></label>
+            <select id="c-sex"><option value="m">Male · ذكر</option><option value="f">Female · أنثى</option></select></div>
+          <div class="row2">
+            <div class="field"><label>Age <span class="ar">السن</span></label><input id="c-age" type="number" inputmode="numeric" placeholder="30"></div>
+            <div class="field"><label>Weight kg <span class="ar">الوزن</span></label><input id="c-weight" type="number" inputmode="decimal" placeholder="80"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>Height cm <span class="ar">الطول</span></label><input id="c-height" type="number" inputmode="numeric" placeholder="175"></div>
+            <div class="field"><label>Wrist cm <span class="ar">الرسغ</span></label><input id="c-wrist" type="number" inputmode="decimal" placeholder="opt."></div>
+          </div>
+          <div class="field"><label>Activity <span class="ar">النشاط</span></label>
+            <select id="c-act">
+              <option value="1.2">Sedentary · قليل الحركة</option>
+              <option value="1.375">Light (1–3 d/wk) · خفيف</option>
+              <option value="1.55" selected>Moderate (3–5 d/wk) · متوسط</option>
+              <option value="1.725">Very active (6–7 d/wk) · عالي</option>
+              <option value="1.9">Athlete · رياضي</option>
+            </select></div>
+          <div class="field"><label>Goal <span class="ar">الهدف</span></label>
+            <select id="c-goal">
+              <option value="lose">Lose fat · تنشيف</option>
+              <option value="maintain" selected>Maintain · ثبات</option>
+              <option value="gain">Build muscle · زيادة عضل</option>
+            </select></div>
+          <div class="field"><label>Body type <span class="ar">نوع الجسم</span></label>
+            <select id="c-body">
+              <option value="auto" selected>Auto-estimate · تلقائي</option>
+              <option value="ecto">Ectomorph · إكتومورف</option>
+              <option value="meso">Mesomorph · ميزومورف</option>
+              <option value="endo">Endomorph · إندومورف</option>
+            </select></div>
+          <button class="calc-go" onclick="calcMacros()">Calculate · احسب</button>
+        </div>
+        <div class="calc-out" id="calcOut"><p class="calc-empty">Fill in your details and tap Calculate. <span class="ar" dir="rtl" style="display:block">املا بياناتك واضغط احسب.</span></p></div>
+      </div>
+      <p class="note">An estimate to start from — adjust based on real results over 2–3 weeks. The healthy-weight range is BMI-based and doesn't account for muscle. Not a substitute for a dietitian, especially with any health condition.<span class="ar" dir="rtl" style="display:block">رقم تبدأ منه — عدّله حسب نتيجتك الفعلية خلال ٢–٣ أسابيع. نطاق الوزن الصحي مبني على BMI ومابيحسبش العضل. مش بديل عن أخصائي تغذية، خصوصاً مع أي حالة صحية.</span></p>
+    </div>
+  </section>
+
+  <!-- SUPPLEMENTS -->
+  <section id="supplements">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Worth it? · يستاهل؟</span>
+        <h2>Supplements,<br>ranked honestly<span class="ar">المكمّلات بصراحة</span></h2>
+        <p>Food first. Most of the magic is consistency and protein — these only fill small gaps.</p>
+        <p class="ar" dir="rtl">الأكل الأول. أغلب النتيجة بتيجي من الاستمرار والبروتين — دي بس بتسدّ فجوات صغيرة.</p>
+      </div>
+      <div class="warm" id="supps"></div>
+    </div>
+  </section>
+
+  <!-- TRAIN SMART (OODA) -->
+  <section id="smart">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Train smart · اتمرّن بذكاء</span>
+        <h2>The weekly loop<span class="ar">حلقة أسبوعية</span></h2>
+        <p>A simple loop to keep improving instead of guessing: observe, orient, decide, act — then repeat.</p>
+        <p class="ar" dir="rtl">حلقة بسيطة تخليك تتحسّن بدل ما تخمّن: لاحظ، حلّل، قرّر، نفّذ — وكرّر.</p>
+      </div>
+      <div class="warm" id="ooda"></div>
+      <p class="note">Realistic pace: true beginners gain strength fast in the first months; muscle comes slowly — often a fraction of a kilo a month, less as you advance. Consistency beats intensity.<span class="ar" dir="rtl" style="display:block">إيقاع واقعي: المبتدئ بيكسب قوة بسرعة في أول شهور؛ العضل بييجي ببطء — أحياناً جزء من الكيلو في الشهر، وأقل لما تتقدّم. الاستمرار أهم من الشدة.</span></p>
+    </div>
+  </section>
+
+  <!-- PROGRESS METRICS -->
+  <section id="metrics">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Measure it · قيس تقدّمك</span>
+        <h2>What to track<span class="ar">إيه اللي تتابعه</span></h2>
+      </div>
+      <div class="safety">
+        <ul>
+          <li>Bodyweight — weigh weekly at the same time; watch the trend, not one day.<span class="ar" dir="rtl">الوزن — اتوزن أسبوعياً نفس الوقت؛ بصّ على الاتجاه مش يوم واحد.</span></li>
+          <li>Strength — are your main lifts going up over the weeks?<span class="ar" dir="rtl">القوة — تمارينك الأساسية بتزيد مع الأسابيع؟</span></li>
+          <li>Measurements — arms, chest, waist, thighs once a month.<span class="ar" dir="rtl">المقاسات — الذراع، الصدر، الوسط، الفخذ مرة في الشهر.</span></li>
+          <li>Photos — same light and pose every 2–4 weeks; they show what the scale misses.<span class="ar" dir="rtl">الصور — نفس الإضاءة والوقفة كل ٢–٤ أسابيع؛ بتوريك اللي الميزان بيفوّته.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tracker">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Log your work · سجّل تمرينك</span>
+        <h2>Progress sheet<span class="ar">جدول المتابعة</span></h2>
+        <p>Type into it on screen, or print it blank and fill it at the gym. What gets tracked, improves.</p>
+        <p class="ar" dir="rtl">اكتب فيه على الشاشة، أو اطبعه فاضي واملاه في الجيم. اللي بتتابعه بيتحسّن.</p>
+      </div>
+      <div class="tracker">
+        <table id="trk">
+          <thead><tr>
+            <th>Date<span class="ar">التاريخ</span></th>
+            <th>Exercise<span class="ar">التمرين</span></th>
+            <th>Weight<span class="ar">الوزن</span></th>
+            <th>Sets×Reps<span class="ar">مجموعات×عدات</span></th>
+            <th>RPE</th>
+            <th>Notes<span class="ar">ملاحظات</span></th>
+          </tr></thead>
+          <tbody id="trkBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="glossary">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Plain language · بكل بساطة</span>
+        <h2>Glossary<span class="ar">قاموس</span></h2>
+      </div>
+      <dl class="glossary" id="gloss"></dl>
+    </div>
+  </section>
+
+  <section id="safety" style="border-bottom:none">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Stay in the game · خليك مكمّل</span><h2>Train safe<span class="ar">اتمرّن بأمان</span></h2></div>
+      <div class="safety">
+        <ul>
+          <li>Warm up first.<span class="ar" dir="rtl">سخّن الأول.</span></li>
+          <li>Form before weight.<span class="ar" dir="rtl">الأداء الصح قبل الوزن.</span></li>
+          <li>Progress gradually — small steady steps.<span class="ar" dir="rtl">اتقدّم بالتدريج — خطوات صغيرة وثابتة.</span></li>
+          <li>Respect recovery: sleep, food, rest days.<span class="ar" dir="rtl">احترم الاستشفاء: نوم، أكل، وأيام راحة.</span></li>
+          <li>Sharp pain means stop.<span class="ar" dir="rtl">الألم الحاد معناه قف فوراً.</span></li>
+        </ul>
+        <p class="disclaim">General educational information, not medical or personal-training advice. Check with a doctor before starting, especially with any injury or condition.
+        <span class="ar" dir="rtl" style="display:block">معلومات تعليمية عامة، مش نصيحة طبية أو تدريب شخصي. استشر دكتور قبل ما تبدأ، خصوصاً لو عندك إصابة أو حالة صحية.</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span class="spark"></span>VOLT — free bilingual training guide · دليل مجاني · © 2026 · rename freely</div></footer>
+
+<script>
+  document.getElementById('burger').addEventListener('click',function(){
+    var m=document.getElementById('menu');
+    var open=m.style.display==='flex';
+    m.style.display=open?'none':'flex';
+    if(!open){m.style.flexDirection='column';m.style.position='fixed';m.style.top='64px';m.style.left='0';m.style.right='0';m.style.background='#141417';m.style.padding='20px';m.style.gap='14px';m.style.borderBottom='1px solid #2A2A30';m.style.zIndex='60';}
+  });
+
+  var bBeg=document.getElementById('b-beg'),bAdv=document.getElementById('b-adv'),
+      lBeg=document.getElementById('lvl-beg'),lAdv=document.getElementById('lvl-adv');
+  function setLevel(adv){bAdv.setAttribute('aria-pressed',adv);bBeg.setAttribute('aria-pressed',!adv);
+    lAdv.classList.toggle('show',adv);lBeg.classList.toggle('show',!adv);}
+  bBeg.onclick=function(){setLevel(false)};bAdv.onclick=function(){setLevel(true)};
+
+  function svg(pose){
+    var p='<svg viewBox="0 0 200 200" role="img" aria-hidden="true">';
+    p+='<line x1="20" y1="186" x2="180" y2="186" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>';
+    (pose.lines||[]).forEach(function(pts){
+      var d=pts.map(function(pt){return pt.join(',')}).join(' ');
+      p+='<polyline points="'+d+'" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
+    });
+    if(pose.head){p+='<circle cx="'+pose.head[0]+'" cy="'+pose.head[1]+'" r="'+pose.head[2]+'" fill="none" stroke="currentColor" stroke-width="5"/>';}
+    (pose.weights||[]).forEach(function(w){p+='<rect x="'+w[0]+'" y="'+w[1]+'" width="'+w[2]+'" height="'+w[3]+'" rx="2" fill="#FF2D55"/>';});
+    return p+'</svg>';
+  }
+  var POSES={
+    squat:{
+      start:{head:[98,40,12],lines:[[[98,52],[98,112],[98,152],[98,182]],[[88,185],[112,185]],[[98,62],[120,98]]]},
+      end:{head:[100,84,12],lines:[[[96,98],[84,150]],[[84,150],[116,150]],[[116,150],[100,182]],[[88,185],[112,185]],[[96,100],[124,116]]]}
+    },
+    pushup:{
+      start:{head:[150,142,11],lines:[[[42,182],[92,150],[138,150]],[[138,150],[140,182]]]},
+      end:{head:[152,160,11],lines:[[[42,182],[92,166],[134,168]],[[134,168],[150,176],[140,182]]]}
+    },
+    hinge:{
+      start:{head:[98,40,12],lines:[[[98,52],[98,112],[98,152],[98,182]],[[88,185],[112,185]],[[98,62],[98,112]]],weights:[[78,108,36,8]]},
+      end:{head:[130,114,11],lines:[[[84,120],[118,118]],[[84,120],[94,150],[98,182]],[[88,185],[112,185]],[[118,120],[116,150]]],weights:[[98,146,36,8]]}
+    },
+    row:{
+      start:{head:[124,112,11],lines:[[[78,118],[112,118]],[[78,118],[90,150],[92,182]],[[82,185],[104,185]],[[112,120],[112,152]]],weights:[[104,150,16,8]]},
+      end:{head:[124,112,11],lines:[[[78,118],[112,118]],[[78,118],[90,150],[92,182]],[[82,185],[104,185]],[[112,120],[122,104],[108,118]]],weights:[[100,114,16,8]]}
+    },
+    lunge:{
+      start:{head:[100,44,12],lines:[[[100,56],[100,116]],[[100,116],[120,150],[120,182]],[[112,185],[132,185]],[[100,116],[80,158],[70,182]],[[64,185],[78,185]]]},
+      end:{head:[100,72,12],lines:[[[100,84],[100,140]],[[100,140],[122,150],[120,182]],[[112,185],[132,185]],[[100,140],[80,176],[68,184]],[[62,185],[76,185]]]}
+    },
+    plank:{
+      hold:{head:[152,146,11],lines:[[[46,182],[96,156],[140,150]],[[140,150],[148,182],[118,182]]]}
+    },
+    press:{
+      start:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[86,185],[112,185]],[[98,62],[90,82],[104,60]]],weights:[[82,54,40,7]]},
+      end:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[86,185],[112,185]],[[98,60],[98,20]]],weights:[[82,12,40,7]]}
+    },
+    curl:{
+      start:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[86,185],[112,185]],[[98,64],[100,108],[104,140]]],weights:[[98,138,16,8]]},
+      end:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[86,185],[112,185]],[[98,64],[100,108],[86,80]]],weights:[[78,76,16,8]]}
+    },
+    calf:{
+      start:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[86,185],[114,185]],[[98,64],[114,98]]]},
+      end:{head:[98,32,12],lines:[[[98,44],[98,104],[98,144],[98,176]],[[98,176],[112,185]],[[104,185],[118,185]],[[98,56],[114,90]]]}
+    },
+    pullup:{
+      start:{head:[100,72,12],lines:[[[60,24],[140,24]],[[84,24],[92,86]],[[116,24],[108,86]],[[100,86],[100,140]],[[100,140],[90,182]],[[100,140],[110,182]]]},
+      end:{head:[100,46,12],lines:[[[60,24],[140,24]],[[84,24],[80,60],[92,60]],[[116,24],[120,60],[108,60]],[[100,62],[100,120]],[[100,120],[92,158]],[[100,120],[108,158]]]}
+    },
+    dip:{
+      start:{head:[100,48,12],lines:[[[100,60],[100,118]],[[100,62],[112,120]],[[100,118],[90,146],[98,168]]]},
+      end:{head:[100,70,12],lines:[[[100,82],[100,126]],[[100,84],[112,108],[112,120]],[[100,126],[88,150],[96,170]]]}
+    },
+    lateralraise:{
+      start:{head:[100,40,12],lines:[[[100,54],[100,128]],[[100,128],[84,184]],[[100,128],[116,184]],[[100,60],[78,112]],[[100,60],[122,112]]],weights:[[72,108,14,7],[118,108,14,7]]},
+      end:{head:[100,40,12],lines:[[[100,54],[100,128]],[[100,128],[84,184]],[[100,128],[116,184]],[[100,60],[58,60]],[[100,60],[142,60]]],weights:[[50,56,14,7],[136,56,14,7]]}
+    },
+    hipthrust:{
+      start:{head:[60,116,11],lines:[[[72,120],[112,162],[140,150]],[[140,150],[150,182]],[[54,128],[80,128]]]},
+      end:{head:[60,116,11],lines:[[[72,122],[112,128],[140,150]],[[140,150],[150,182]],[[54,128],[80,128]]]}
+    },
+    pushdown:{
+      start:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[88,185],[112,185]],[[98,64],[98,108],[86,92]]]},
+      end:{head:[98,40,12],lines:[[[98,52],[98,112],[98,150],[98,182]],[[88,185],[112,185]],[[98,64],[98,108],[98,140]]]}
+    },
+    shrug:{
+      start:{head:[100,30,12],lines:[[[60,58],[140,58]],[[100,42],[100,118]],[[100,118],[86,182]],[[100,118],[114,182]],[[68,58],[68,118]],[[132,58],[132,118]]],weights:[[60,116,16,7],[124,116,16,7]]},
+      end:{head:[100,26,12],lines:[[[60,50],[140,50]],[[100,38],[100,118]],[[100,118],[86,182]],[[100,118],[114,182]],[[68,50],[68,108]],[[132,50],[132,108]]],weights:[[60,106,16,7],[124,106,16,7]]}
+    },
+    legext:{
+      start:{head:[68,64,12],lines:[[[70,76],[70,120]],[[70,120],[110,120]],[[110,120],[110,160]],[[58,124],[74,124]],[[64,80],[64,120]]]},
+      end:{head:[68,64,12],lines:[[[70,76],[70,120]],[[70,120],[110,120]],[[110,120],[150,120]],[[58,124],[74,124]],[[64,80],[64,120]]]}
+    },
+    crunch:{
+      start:{head:[48,156,10],lines:[[[60,160],[110,162]],[[110,162],[140,140],[150,170]]]},
+      end:{head:[54,138,10],lines:[[[62,148],[110,162]],[[110,162],[140,140],[150,170]]]}
+    }
+  };
+
+  function panelsFor(key,hold){
+    var stat;
+    if(hold){stat='<div class="panels single"><div class="panel"><span class="plabel"><span class="ar">ثبات</span>Hold</span><div class="fig-end">'+svg(POSES[key].hold)+'</div></div></div>';}
+    else{stat='<div class="panels"><div class="panel"><span class="plabel"><span class="ar">البداية</span>Start</span><div class="fig-start">'+svg(POSES[key].start)+'</div></div><div class="panel"><span class="plabel"><span class="ar">النهاية</span>End</span><div class="fig-end">'+svg(POSES[key].end)+'</div></div></div>';}
+    var motion='<div class="fig-motion"><div class="panel"><span class="plabel"><span class="ar">حركة</span>Motion</span><div class="motion" data-pose="'+key+'" data-hold="'+(hold?1:0)+'"></div></div></div>';
+    return '<div class="fig-static">'+stat+'</div>'+motion;
+  }
+
+  var EXERCISES=[
+    {key:'squat', en:'Squat', ar:'سكوات', tags:['home','gym'],
+      cue_en:'Sit back and down, chest tall, knees over your toes.',
+      cue_ar:'انزل وكأنك هتقعد، صدرك لفوق وركبك على نفس اتجاه أصابع رجلك.'},
+    {key:'pushup', en:'Push-up', ar:'تمرين الضغط', tags:['home','gym'],
+      cue_en:'Body in one straight line, lower until your chest nears the floor.',
+      cue_ar:'جسمك خط واحد، انزل لحد ما صدرك يقرب من الأرض.'},
+    {key:'hinge', en:'Hinge / RDL', ar:'الرفعة الرومانية', tags:['home','gym'],
+      cue_en:'Push hips back, keep a flat back — bend from the hips, not the waist.',
+      cue_ar:'ادفع الورك لورا وضهرك مفرود — اللي بيتني هو الورك مش وسطك.'},
+    {key:'row', en:'Row', ar:'تجديف', tags:['home','gym'],
+      cue_en:'Lead with the elbow, squeeze the shoulder blade, lower slowly.',
+      cue_ar:'اسحب بكوعك، اعصر لوح كتفك، ونزّل بالراحة.'},
+    {key:'lunge', en:'Lunge', ar:'طعنة', tags:['home','gym'],
+      cue_en:'Drop straight down, front knee over the mid-foot, drive through the heel.',
+      cue_ar:'انزل لتحت مباشرة، ركبتك الأمامية فوق رجلك، وادفع من كعبك.'},
+    {key:'plank', en:'Plank', ar:'بلانك', tags:['home','gym'], hold:true,
+      cue_en:'Brace your abs, hold a straight line head to heels, keep breathing.',
+      cue_ar:'ثبّت بطنك، خليك خط مستقيم من راسك لرجلك، ومتنساش تتنفس.'}
+  ];
+
+  function pillsHTML(tags){
+    var m={home:'<span class="pill home">Home</span>',gym:'<span class="pill gym">Gym</span>'};
+    return tags.map(function(t){return m[t]}).join(' ');
+  }
+  document.getElementById('exGrid').innerHTML = EXERCISES.map(function(ex){
+    var panels=panelsFor(ex.key,ex.hold);
+    return '<div class="ex"><div class="head"><h3>'+ex.en+'<span class="ar">'+ex.ar+'</span></h3><div>'+pillsHTML(ex.tags)+'</div></div>'+
+      panels+
+      '<p class="cue">'+ex.cue_en+'</p><p class="cue ar" dir="rtl">'+ex.cue_ar+'</p></div>';
+  }).join('');
+
+  var WARM=[
+    {en:'March in place',ar:'مشي في المكان',t:'1 min · دقيقة'},
+    {en:'Arm circles',ar:'تدوير الذراعين',t:'30s each · ٣٠ث لكل اتجاه'},
+    {en:'Leg swings',ar:'تأرجح الرجل',t:'10 each · ١٠ لكل رجل'},
+    {en:'Bodyweight squats',ar:'سكوات بوزن الجسم',t:'×10'},
+    {en:'Hip circles',ar:'تدوير الورك',t:'10 each · ١٠ لكل اتجاه'},
+    {en:'Light first set',ar:'مجموعة خفيفة',t:'of exercise 1 · من أول تمرين'}
+  ];
+  document.getElementById('warm').innerHTML=WARM.map(function(w,i){
+    return '<div class="item"><div class="n">'+(i+1)+'</div><h4>'+w.en+'</h4><div class="ar" dir="rtl">'+w.ar+'</div><div class="t">'+w.t+'</div></div>';
+  }).join('');
+
+  var GLOSS=[
+    ['Rep','عدة','One full repetition.','عدة واحدة كاملة.'],
+    ['Set','مجموعة','Reps done back-to-back before rest.','عدات ورا بعض قبل الراحة.'],
+    ['Progressive overload','الزيادة التدريجية','Gradually doing more so the body adapts.','تزوّد شوية بشوية علشان الجسم يتأقلم.'],
+    ['RPE','شدة المجهود','1–10 scale of how hard a set felt.','مقياس ١–١٠ لصعوبة المجموعة.'],
+    ['RIR','العدات الاحتياطي','Reps you had left before failure.','العدات اللي كانت فاضلة قبل الفشل.'],
+    ['Compound lift','تمرين مركّب','A move using many muscles at once.','حركة بتشغّل عضلات كتير مع بعض.'],
+    ['Tempo','الإيقاع','The speed of each rep.','سرعة أداء العدة.'],
+    ['Deload','أسبوع التخفيف','A planned easy week to recover.','أسبوع خفيف مخطّط علشان تستشفي.']
+  ];
+  document.getElementById('gloss').innerHTML=GLOSS.map(function(g){
+    return '<div class="term"><dt><span class="ar">'+g[1]+' ·</span> '+g[0]+'</dt><dd>'+g[2]+'</dd><dd class="ar" dir="rtl">'+g[3]+'</dd></div>';
+  }).join('');
+
+  var rows='';for(var i=0;i<12;i++){rows+='<tr>'+
+    '<td><input aria-label="date"></td><td><input aria-label="exercise"></td><td><input aria-label="weight"></td>'+
+    '<td><input aria-label="sets"></td><td><input aria-label="rpe"></td><td><input aria-label="notes"></td></tr>';}
+  document.getElementById('trkBody').innerHTML=rows;
+
+  // ---- MUSCLE MAP ----
+  var MUSCLES=[
+    {en:'Chest',ar:'الصدر',fig:'pushup',moves:[['Push-up → Bench press','ضغط → بنش'],['Incline push-up → Incline press','ضغط مايل'],['Decline / feet-up push-up → Decline press','ضغط منخفض'],['Floor fly → Dumbbell / cable fly','تفتيح'],['Chair dips → Chest dips','متوازي صدر']]},
+    {en:'Back',ar:'الظهر',fig:'row',moves:[['Backpack row → Bent-over barbell row','تجديف بار'],['One-arm row (bag → dumbbell)','تجديف بإيد'],['Towel / door pull → Pull-up / lat pulldown','عقلة / سحب أمامي'],['Inverted row → Seated cable row','تجديف جالس'],['Superman → Back extension','تمديد ظهر']]},
+    {en:'Shoulders',ar:'الأكتاف',fig:'press',moves:[['Pike push-up → Overhead press','ضغط كتف'],['Lateral raise (bottles → dumbbells)','رفرفة جانبية'],['Rear-delt raise / reverse fly','رفرفة خلفية'],['Front raise','رفرفة أمامية'],['Upright row / shrugs','سحب عمودي / شراج']]},
+    {en:'Arms',ar:'الذراعين',fig:'curl',moves:[['Bag curl → Barbell / dumbbell curl','مرجحة باي'],['Hammer curl','مطرقة'],['Bench dip → Triceps pushdown','تراي ديب'],['Diamond / close push-up','ضغط ضيّق'],['Overhead triceps extension','تراي خلف الراس']]},
+    {en:'Quads',ar:'الفخذ الأمامي',fig:'squat',moves:[['Squat → Back / front squat','سكوات'],['Split squat → Leg press','مكبس'],['Step-up','صعود'],['Wall sit','وقفة الحيطة'],['Leg extension','مدّ الرجل']]},
+    {en:'Hamstrings & Glutes',ar:'الخلفية والمؤخرة',fig:'hinge',moves:[['Hip hinge → Romanian deadlift','رفعة رومانية'],['Glute bridge → Hip thrust','جسر / دفع ورك'],['Single-leg RDL','رفعة برجل'],['Nordic curl → Leg curl','ثني الرجل'],['Good morning','جود مورنينج']]},
+    {en:'Calves',ar:'السمانة',fig:'calf',moves:[['Standing calf raise (bodyweight → loaded)','سمانة واقف'],['Seated calf raise','سمانة جالس'],['Single-leg calf raise','سمانة برجل']]},
+    {en:'Core',ar:'البطن',fig:'plank',hold:true,moves:[['Plank','بلانك'],['Side plank','بلانك جانبي'],['Dead bug','ديد باج'],['Hollow hold → Hanging knee raise','رفع ركبة'],['Bicycle crunch','كرنش دراجة']]}
+  ];
+  document.getElementById('muscleGrid').innerHTML=MUSCLES.map(function(m){
+    var li=m.moves.map(function(x){return '<li>'+x[0]+'<span class="ar" dir="rtl">'+x[1]+'</span></li>';}).join('');
+    return '<div class="ex"><div class="head"><h3>'+m.en+'<span class="ar">'+m.ar+'</span></h3></div>'+panelsFor(m.fig,m.hold)+'<ul class="mlist">'+li+'</ul></div>';
+  }).join('');
+
+  // ---- ADVANCED TECHNIQUES ----
+  var ADV=[
+    ['Drop set','الدروب ست','Hit near-failure, drop the weight ~20–30%, and keep repping with no rest. One round on your last set is plenty.','اوصل قرب الفشل، نزّل الوزن ٢٠–٣٠٪، وكمّل من غير راحة. جولة واحدة في آخر مجموعة تكفي.'],
+    ['Rest-pause','الريست-بوز','Reach near-failure, rest 10–15 seconds, then squeeze out a few more reps with the same weight.','اوصل قرب الفشل، استريّح ١٠–١٥ ثانية، وبعدين طلّع كام عدة كمان بنفس الوزن.'],
+    ['Supersets','السوبر ست','Two moves back-to-back, no rest. Pair a push with a pull to save time without losing strength.','تمرينين ورا بعض من غير راحة. اعمل دفع مع سحب علشان توفّر وقت من غير ما تخسر قوة.'],
+    ['Tempo work','التحكّم في الإيقاع','Slow the lowering phase to ~3 seconds. More tension, more growth — without adding weight.','بطّئ النزول لحوالي ٣ ثواني. شدّ أكتر ونمو أكتر — من غير ما تزوّد وزن.']
+  ];
+  document.getElementById('advTech').innerHTML=ADV.map(function(a){
+    return '<div class="principle"><h3><span class="ar">'+a[1]+' ·</span> '+a[0]+'</h3><p>'+a[2]+'</p><p class="ar" dir="rtl">'+a[3]+'</p></div>';
+  }).join('');
+
+  // ---- NUTRITION ----
+  var NUT=[
+    ['Calories','السعرات','To build muscle, eat a little above maintenance; to lean down, a little below. Judge it by the scale trend over weeks.','علشان تبني عضل كُل أكتر شوية من احتياجك؛ وعلشان تنشّف كُل أقل شوية. احكم من اتجاه الوزن على مدى أسابيع.'],
+    ['Protein','البروتين','Around 1.6–2.2 g per kg of bodyweight daily, split across meals. Eggs, chicken, fish, dairy, legumes, lean meat.','حوالي ١.٦–٢.٢ جرام لكل كيلو من وزنك يومياً، موزّعة على الوجبات. بيض، فراخ، سمك، ألبان، بقوليات، لحم.'],
+    ['Carbs','الكربوهيدرات','Your main training fuel — rice, oats, potatoes, bread, fruit. Put more around your workouts.','وقود تمرينك الأساسي — رز، شوفان، بطاطس، عيش، فاكهة. زوّدها حوالين التمرين.'],
+    ['Fats','الدهون','About 0.8–1 g per kg for hormones — olive oil, nuts, eggs, oily fish.','حوالي ٠.٨–١ جرام لكل كيلو للهرمونات — زيت زيتون، مكسرات، بيض، سمك.'],
+    ['Water & veg','المية والخضار','Drink through the day; fill half the plate with vegetables and fruit for fibre and recovery.','اشرب مية على مدار اليوم؛ خلّي نص الطبق خضار وفاكهة للألياف والاستشفاء.']
+  ];
+  document.getElementById('nutri').innerHTML=NUT.map(function(n){
+    return '<div class="principle"><h3><span class="ar">'+n[1]+' ·</span> '+n[0]+'</h3><p>'+n[2]+'</p><p class="ar" dir="rtl">'+n[3]+'</p></div>';
+  }).join('');
+
+  // ---- SUPPLEMENTS ----
+  var SUP=[
+    {tier:'Strong evidence · أدلة قوية',items:[['Creatine monohydrate','3–5 g/day · ٣–٥ جم يومياً'],['Protein powder','if you miss your protein · لو مش بتكمّل بروتينك'],['Caffeine','pre-workout · قبل التمرين']]},
+    {tier:'Situational · حسب الحالة',items:[['Vitamin D','if low / little sun · لو ناقص'],['Omega-3','if you eat little fish · لو مابتاكلش سمك'],['Electrolytes','heavy sweat / heat · مع العرق والحر']]},
+    {tier:'Skip the hype · سيبها',items:[['Most fat-burners','little real effect · تأثير ضعيف'],['BCAAs','redundant if protein is enough · مش محتاجها'],['Exotic blends','save your money · وفّر فلوسك']]}
+  ];
+  document.getElementById('supps').innerHTML=SUP.map(function(s){
+    var li=s.items.map(function(it){return '<div style="margin-top:8px"><strong>'+it[0]+'</strong><div class="ar" dir="rtl" style="color:var(--muted);font-size:.84rem">'+it[1]+'</div></div>';}).join('');
+    return '<div class="item"><span class="tier-tag">'+s.tier+'</span>'+li+'</div>';
+  }).join('');
+
+  // ---- OODA ----
+  var OODA=[
+    {en:'Observe',ar:'لاحظ',t:'Log weights, reps, how it felt · سجّل الأوزان والعدات'},
+    {en:'Orient',ar:'حلّل',t:'Compare to last week · قارن بالأسبوع اللي فات'},
+    {en:'Decide',ar:'قرّر',t:'Pick one change · اختار تغيير واحد'},
+    {en:'Act',ar:'نفّذ',t:'Apply it, then observe · نفّذه وارجع لاحظ'}
+  ];
+  document.getElementById('ooda').innerHTML=OODA.map(function(o,i){
+    return '<div class="item"><div class="n">'+(i+1)+'</div><h4>'+o.en+'</h4><div class="ar" dir="rtl">'+o.ar+'</div><div class="t">'+o.t+'</div></div>';
+  }).join('');
+
+  // ---- MOTION ENGINE (makes the figures "move") ----
+  var motions=[];
+  function initMotions(){
+    document.querySelectorAll('.motion:not([data-init])').forEach(function(el){
+      el.setAttribute('data-init','1');
+      var key=el.getAttribute('data-pose'), hold=el.getAttribute('data-hold')==='1';
+      el.innerHTML='<div class="fig-start">'+svg(hold?POSES[key].hold:POSES[key].start)+'</div>';
+      motions.push({el:el,key:key,hold:hold,frame:0});
+    });
+  }
+  initMotions();
+  var animTimer=null;
+  function startAnim(){
+    if(animTimer)return;
+    animTimer=setInterval(function(){
+      motions.forEach(function(m){
+        if(m.hold)return;
+        m.frame=1-m.frame;
+        var pose=m.frame?POSES[m.key].end:POSES[m.key].start;
+        var cls=m.frame?'fig-end':'fig-start';
+        m.el.innerHTML='<div class="'+cls+'">'+svg(pose)+'</div>';
+      });
+    },650);
+  }
+  function stopAnim(){if(animTimer){clearInterval(animTimer);animTimer=null;}}
+  var bAnim=document.getElementById('b-anim');
+  bAnim.onclick=function(){
+    var on=document.body.classList.toggle('animate');
+    bAnim.setAttribute('aria-pressed',on);
+    bAnim.textContent=on?'⏸ Stop · إيقاف':'▶ Animate · حرّك';
+    if(on)startAnim();else stopAnim();
+  };
+
+  // ---- CALORIE & MACRO CALCULATOR (Mifflin-St Jeor) ----
+  function calcMacros(){
+    var sex=document.getElementById('c-sex').value;
+    var age=parseFloat(document.getElementById('c-age').value);
+    var w=parseFloat(document.getElementById('c-weight').value);
+    var h=parseFloat(document.getElementById('c-height').value);
+    var act=parseFloat(document.getElementById('c-act').value);
+    var goal=document.getElementById('c-goal').value;
+    var out=document.getElementById('calcOut');
+    if(!(age>0)||!(w>0)||!(h>0)){out.innerHTML='<p class="calc-empty">Please enter age, weight, and height. <span class="ar" dir="rtl" style="display:block">من فضلك ادخل السن والوزن والطول.</span></p>';return;}
+    var bmr=10*w+6.25*h-5*age+(sex==='m'?5:-161);
+    var tdee=bmr*act;
+    var cals=tdee, tag='Maintain', tagAr='ثبات';
+    if(goal==='lose'){cals=tdee*0.85;tag='Fat loss';tagAr='تنشيف';}
+    if(goal==='gain'){cals=tdee*1.10;tag='Muscle gain';tagAr='زيادة عضل';}
+    var body=document.getElementById('c-body').value;
+    var wrist=parseFloat(document.getElementById('c-wrist').value);
+    var estimated=false, method='';
+    if(body==='auto'){
+      estimated=true;
+      if(wrist>0){
+        var ratio=h/wrist, thr=(sex==='m')?[9.6,10.4]:[10.1,11.0];
+        body = ratio>thr[1]?'ecto':(ratio<thr[0]?'endo':'meso');
+        method='from frame size · من الرسغ';
+      } else {
+        var bmi=w/Math.pow(h/100,2);
+        body = bmi<19?'ecto':(bmi>27?'endo':'meso');
+        method='rough, from BMI · تقديري من BMI';
+      }
+    } else { method='your choice · اختيارك'; }
+    var nm={ecto:['Ectomorph','إكتومورف','more fuel, carb-leaning · وقود أكتر ومايل للكارب'],
+            meso:['Mesomorph','ميزومورف','balanced split · توزيع متوازن'],
+            endo:['Endomorph','إندومورف','tighter, higher protein · أضيق وبروتين أعلى']};
+    var fatPerKg=0.9, protPerKg=1.8, calMult=1;
+    if(body==='ecto'){calMult=1.05;fatPerKg=0.8;}
+    else if(body==='endo'){calMult=0.95;fatPerKg=1.0;protPerKg=2.0;}
+    var btNote=nm[body][0]+' · '+nm[body][1]+' — '+nm[body][2]+' ('+method+')';
+    cals=Math.round((cals*calMult)/10)*10;
+    var protein=Math.round(w*protPerKg);
+    var fat=Math.round(w*fatPerKg);
+    var carbs=Math.max(0,Math.round((cals-protein*4-fat*9)/4));
+    var hm=h/100, wlo=Math.round(18.5*hm*hm), whi=Math.round(24.9*hm*hm);
+    var days=goal==='gain'?'4–5':(goal==='lose'?'4':'3–4');
+    var extra=body==='endo'?' + daily steps':(body==='ecto'?' · light cardio':'');
+    var pace=goal==='lose'?'lose ~0.5 kg/wk · نزول ٠.٥':(goal==='gain'?'gain ~0.25–0.5 kg/wk · زيادة ٠.٢٥–٠.٥':'hold steady · ثبات');
+    function row(lab,labAr,grams,kcal){
+      return '<div class="macro-row"><span class="lab">'+lab+'<span class="ar" dir="rtl">'+labAr+'</span></span><span class="g">'+grams+' g <small style="color:var(--muted);font-weight:500">· '+kcal+' kcal</small></span></div>';
+    }
+    out.innerHTML=
+      '<div class="lead">'+tag+' target · هدف '+tagAr+'</div>'+
+      '<div class="big">'+cals+'<small> kcal/day · يومياً</small></div>'+
+      (btNote?'<div style="color:var(--muted);font-size:.82rem;margin:-8px 0 14px">'+btNote+'</div>':'')+
+      row('Protein','بروتين',protein,protein*4)+
+      row('Carbs','كارب',carbs,carbs*4)+
+      row('Fat','دهون',fat,fat*9)+
+      '<div class="macro-row"><span class="lab">Maintenance<span class="ar" dir="rtl">ثبات</span></span><span class="g" style="color:var(--muted)">'+Math.round(tdee/10)*10+' kcal</span></div>'+
+      '<div class="macro-row"><span class="lab">Healthy weight<span class="ar" dir="rtl">وزن صحي</span></span><span class="g" style="color:var(--bone)">'+wlo+'–'+whi+' kg</span></div>'+
+      '<div class="macro-row"><span class="lab">Pace<span class="ar" dir="rtl">معدّل</span></span><span class="g" style="color:var(--bone);font-weight:600;font-size:.84rem">'+pace+'</span></div>'+
+      '<div class="macro-row"><span class="lab">Train<span class="ar" dir="rtl">تمرين</span></span><span class="g" style="color:var(--bone)">'+days+extra+' / wk</span></div>';
+  }
+
+  // ---- BODY TYPES (somatotypes) ----
+  function buildBody(sh,wa,hi){
+    var cx=60;
+    var pts=[[-(sh/2),56],[-(wa/2),104],[-(hi/2),126],[-(hi/2)+4,192],[-5,192],[0,150],
+             [5,192],[(hi/2)-4,192],[(hi/2),126],[(wa/2),104],[(sh/2),56],[4,46],[-4,46]];
+    var d='M '+pts.map(function(p){return (cx+p[0])+','+p[1];}).join(' L ')+' Z';
+    return '<svg viewBox="0 0 120 200" role="img" aria-hidden="true">'+
+      '<circle cx="60" cy="30" r="11" fill="rgba(198,255,0,0.12)" stroke="#C6FF00" stroke-width="3"/>'+
+      '<path d="'+d+'" fill="rgba(198,255,0,0.12)" stroke="#C6FF00" stroke-width="3" stroke-linejoin="round"/></svg>';
+  }
+  var BODYTYPES=[
+    {en:'Ectomorph',ar:'إكتومورف',tag:'Lean · نحيف',sh:30,wa:24,hi:28,
+      desc_en:'Naturally slim, narrow frame, finds it hard to gain weight (a "hardgainer").',
+      desc_ar:'نحيف بطبعه، هيكل ضيّق، بيتعبه إنه يزيد وزن.',
+      tip_en:'Eat more — extra calories and carbs. Lift heavy with compound moves; keep cardio light.',
+      tip_ar:'كُل أكتر — سعرات وكارب زيادة. شيل تقيل بالتمارين المركّبة، وقلّل الكارديو.'},
+    {en:'Mesomorph',ar:'ميزومورف',tag:'Athletic · رياضي',sh:48,wa:28,hi:34,
+      desc_en:'Naturally muscular and athletic, broad shoulders; builds muscle and loses fat fairly easily.',
+      desc_ar:'عضلي ورياضي بطبعه، أكتاف عريضة؛ بيكسب عضل ويخسر دهون بسهولة نسبياً.',
+      tip_en:'Balanced training and eating — you respond fast, so keep pushing progressive overload.',
+      tip_ar:'تمرين وأكل متوازن — جسمك بيستجيب بسرعة، فاستمر في الزيادة التدريجية.'},
+    {en:'Endomorph',ar:'إندومورف',tag:'Solid · ممتلئ',sh:40,wa:46,hi:44,
+      desc_en:'Wider, softer frame; gains muscle but also fat easily, with a tendency to a slower metabolism.',
+      desc_ar:'هيكل أعرض وأنعم؛ بيكسب عضل لكن دهون كمان بسهولة، والميتابوليزم أميل للبطء.',
+      tip_en:'Mind your calories, add daily activity and cardio, and keep lifting to build shape.',
+      tip_ar:'راعي سعراتك، زوّد الحركة والكارديو، وكمّل حديد علشان الشكل.'}
+  ];
+  document.getElementById('bodyGrid').innerHTML=BODYTYPES.map(function(b){
+    return '<div class="ex"><div class="head"><h3>'+b.en+'<span class="ar">'+b.ar+'</span></h3></div>'+
+      '<div class="bodyfig">'+buildBody(b.sh,b.wa,b.hi)+'</div>'+
+      '<div class="bt-label">'+b.tag+'</div>'+
+      '<p class="bt-tip">'+b.desc_en+'</p><p class="bt-tip ar" dir="rtl">'+b.desc_ar+'</p>'+
+      '<p class="bt-tip" style="color:var(--volt)">▸ '+b.tip_en+'</p><p class="bt-tip ar" dir="rtl">▸ '+b.tip_ar+'</p></div>';
+  }).join('');
+
+  // ---- EXERCISE LIBRARY (standard exercise names + alternatives) ----
+  var LIBRARY=[
+    {en:'Chest',ar:'الصدر',ex:[
+      ['Barbell bench press','بنش بار',['Dumbbell bench press','Push-up','Machine chest press','Floor press','Smith bench press']],
+      ['Incline bench press','بنش مايل',['Incline dumbbell press','Incline push-up','Landmine press','Incline machine press']],
+      ['Decline bench press','بنش منخفض',['Decline dumbbell press','Decline push-up','Weighted chest dip']],
+      ['Chest dip','غطس الصدر',['Bench dip','Assisted dip','Machine dip','Ring dip']],
+      ['Cable crossover','تفتيح كابل',['Dumbbell fly','Pec deck','Band fly','Floor fly']],
+      ['Push-up','ضغط',['Knee push-up','Incline push-up','Deficit push-up','Archer push-up']]
+    ]},
+    {en:'Back (lats & mid-back)',ar:'الظهر',ex:[
+      ['Pull-up','عقلة',['Lat pulldown','Assisted pull-up','Band pull-up','Inverted row']],
+      ['Bent-over barbell row','تجديف بار',['Dumbbell row','Pendlay row','T-bar row','Machine row']],
+      ['Seated cable row','تجديف كابل جالس',['Chest-supported row','Band row','Inverted row']],
+      ['Single-arm dumbbell row','تجديف بإيد',['Meadows row','Landmine row','Backpack row']],
+      ['Straight-arm pulldown','سحب بذراع مفرود',['Dumbbell pullover','Band straight-arm pull']],
+      ['Deadlift','رفعة ميتة',['Trap-bar deadlift','Rack pull','Romanian deadlift','Hip hinge']]
+    ]},
+    {en:'Shoulders (delts)',ar:'الأكتاف',ex:[
+      ['Overhead press','ضغط كتف بار',['Dumbbell shoulder press','Pike push-up','Machine press','Push press']],
+      ['Lateral raise','رفرفة جانبية',['Cable lateral','Machine lateral','Band lateral','Leaning lateral']],
+      ['Rear-delt fly','رفرفة خلفية',['Reverse pec deck','Cable rear fly','Face pull','Bent-over raise']],
+      ['Front raise','رفرفة أمامية',['Cable front raise','Plate raise','Band front raise']],
+      ['Upright row','سحب عمودي',['Cable upright row','Dumbbell upright row','High pull']],
+      ['Arnold press','ضغط أرنولد',['Seated dumbbell press','Z-press']]
+    ]},
+    {en:'Biceps',ar:'الباي',ex:[
+      ['Barbell curl','مرجحة بار',['EZ-bar curl','Dumbbell curl','Cable curl','Band curl']],
+      ['Hammer curl','مطرقة',['Rope hammer curl','Cross-body hammer']],
+      ['Incline dumbbell curl','مرجحة مايل',['Spider curl','Bayesian cable curl']],
+      ['Preacher curl','مرجحة بريتشر',['Machine preacher','Concentration curl']],
+      ['Chin-up','عقلة عكسية',['Assisted chin-up','Band chin-up']]
+    ]},
+    {en:'Triceps',ar:'التراي',ex:[
+      ['Close-grip bench press','بنش ضيّق',['Diamond push-up','Dip','Machine press']],
+      ['Triceps pushdown','دفع التراي',['Rope pushdown','Band pushdown','Single-arm pushdown']],
+      ['Overhead extension','تمديد خلف الراس',['Skull crusher','Cable overhead','Dumbbell extension']],
+      ['Dip','غطس',['Bench dip','Assisted dip','Ring dip']],
+      ['Triceps kickback','ركلة التراي',['Cable kickback','Band kickback']]
+    ]},
+    {en:'Forearms & grip',ar:'الساعد',ex:[
+      ['Wrist curl','ثني الرسغ',['Reverse wrist curl','Cable wrist curl']],
+      ['Reverse curl','مرجحة عكسية',['EZ reverse curl','Cable reverse curl']],
+      ['Farmer’s carry','حمل المزارع',['Dead hang','Plate pinch','Towel hang']]
+    ]},
+    {en:'Traps',ar:'الترابيس',ex:[
+      ['Barbell shrug','شراج بار',['Dumbbell shrug','Cable shrug','Trap-bar shrug']],
+      ['Face pull','فيس بُل',['Band face pull','Rear-delt row']],
+      ['Upright row','سحب عمودي',['Cable upright row','Dumbbell upright row']]
+    ]},
+    {en:'Quads',ar:'الفخذ الأمامي',ex:[
+      ['Back squat','سكوات خلفي',['Front squat','Goblet squat','Hack squat','Smith squat']],
+      ['Leg press','مكبس الرجل',['Single-leg press','Machine squat']],
+      ['Bulgarian split squat','سكوات بلغاري',['Split squat','Walking lunge','Step-up']],
+      ['Leg extension','مدّ الرجل',['Band leg extension','Sissy squat']],
+      ['Walking lunge','طعنة مشي',['Reverse lunge','Static lunge','Curtsy lunge']]
+    ]},
+    {en:'Hamstrings',ar:'الخلفية',ex:[
+      ['Romanian deadlift','رفعة رومانية',['Stiff-leg deadlift','Single-leg RDL','Good morning']],
+      ['Leg curl','ثني الرجل',['Nordic curl','Band leg curl','Stability-ball curl']],
+      ['Glute-ham raise','رفعة الورك-الخلفية',['Nordic curl','Back extension (ham focus)']]
+    ]},
+    {en:'Glutes',ar:'المؤخرة',ex:[
+      ['Hip thrust','دفع الورك',['Glute bridge','Single-leg hip thrust','Machine hip thrust']],
+      ['Bulgarian split squat','سكوات بلغاري',['Step-up','Curtsy lunge','Walking lunge']],
+      ['Cable kickback','ركلة الورك',['Band kickback','Donkey kick','Reverse hyper']],
+      ['Sumo deadlift','رفعة سومو',['Trap-bar deadlift','Romanian deadlift']]
+    ]},
+    {en:'Calves',ar:'السمانة',ex:[
+      ['Standing calf raise','سمانة واقف',['Smith calf raise','Single-leg calf raise','Donkey calf raise']],
+      ['Seated calf raise','سمانة جالس',['Machine seated raise','Leg-press calf press']]
+    ]},
+    {en:'Abs & core',ar:'البطن',ex:[
+      ['Plank','بلانك',['Side plank','RKC plank','Long-lever plank']],
+      ['Hanging leg raise','رفع الرجل معلّق',['Hanging knee raise','Lying leg raise','Captain’s chair']],
+      ['Cable crunch','كرنش كابل',['Weighted crunch','Machine crunch']],
+      ['Russian twist','تويست روسي',['Bicycle crunch','Pallof press','Woodchopper']],
+      ['Ab-wheel rollout','عجلة البطن',['Stability-ball rollout','Plank reach-out']]
+    ]}
+  ];
+  var PAT={
+    'Barbell bench press':'pushup','Incline bench press':'pushup','Decline bench press':'pushup','Chest dip':'dip','Cable crossover':'pushup','Push-up':'pushup',
+    'Pull-up':'pullup','Bent-over barbell row':'row','Seated cable row':'row','Single-arm dumbbell row':'row','Straight-arm pulldown':'pullup','Deadlift':'hinge',
+    'Overhead press':'press','Lateral raise':'lateralraise','Rear-delt fly':'lateralraise','Front raise':'lateralraise','Upright row':'press','Arnold press':'press',
+    'Barbell curl':'curl','Hammer curl':'curl','Incline dumbbell curl':'curl','Preacher curl':'curl','Chin-up':'pullup',
+    'Close-grip bench press':'pushup','Triceps pushdown':'pushdown','Overhead extension':'pushdown','Dip':'dip','Triceps kickback':'pushdown',
+    'Wrist curl':'curl','Reverse curl':'curl','Farmer’s carry':'shrug',
+    'Barbell shrug':'shrug','Face pull':'row',
+    'Back squat':'squat','Leg press':'squat','Bulgarian split squat':'lunge','Leg extension':'legext','Walking lunge':'lunge',
+    'Romanian deadlift':'hinge','Leg curl':'legext','Glute-ham raise':'hinge',
+    'Hip thrust':'hipthrust','Cable kickback':'hipthrust','Sumo deadlift':'hinge',
+    'Standing calf raise':'calf','Seated calf raise':'calf',
+    'Plank':'plank','Hanging leg raise':'crunch','Cable crunch':'crunch','Russian twist':'crunch','Ab-wheel rollout':'plank'
+  };
+  document.getElementById('libGrid').innerHTML=LIBRARY.map(function(g){
+    var items=g.ex.map(function(e){
+      var pat=PAT[e[0]]||'squat', hold=pat==='plank'?1:0;
+      var fig='<div class="libfig"><div class="motion" data-pose="'+pat+'" data-hold="'+hold+'"></div></div>';
+      return '<div class="libx">'+fig+'<div class="libtext"><div class="libx-main"><span class="ar" dir="rtl">'+e[1]+'</span>'+e[0]+'</div>'+
+        '<div class="libx-alt"><span class="altlabel">Alt · بدائل</span>'+e[2].join(' · ')+'</div></div></div>';
+    }).join('');
+    return '<details class="libgroup"><summary><span>'+g.en+' <span class="ar">'+g.ar+'</span></span><span class="cnt">'+g.ex.length+' moves</span></summary><div class="libbody">'+items+'</div></details>';
+  }).join('');
+  initMotions();
+</script>
+</body>
+</html>
