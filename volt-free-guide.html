@@ -322,6 +322,27 @@
   @media(max-width:540px){
     .day-grid,.ex-list-grid,.poster-grid,.mb-grid{grid-template-columns:1fr}
   }
+  .vid-section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .vid-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    position:relative;cursor:pointer;transition:border-color .2s,transform .15s}
+  .vid-card:hover{border-color:var(--volt);transform:translateY(-3px)}
+  .vid-card video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block}
+  .vid-card .vid-num{position:absolute;top:8px;left:8px;font-family:"Anton";font-size:1rem;
+    background:rgba(0,0,0,.6);color:var(--volt);padding:3px 7px;border-radius:3px;line-height:1.2}
+  .vid-card .vid-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.35);transition:background .2s;pointer-events:none}
+  .vid-card:hover .vid-play,.vid-card.playing .vid-play{background:transparent}
+  .vid-card .vid-play svg{width:44px;height:44px;opacity:.9;transition:opacity .2s}
+  .vid-card:hover .vid-play svg,.vid-card.playing .vid-play svg{opacity:0}
+  .vid-lb{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:300;display:none;
+    align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+  .vid-lb.open{display:flex}
+  .vid-lb video{max-width:min(94vw,440px);max-height:90vh;border-radius:10px;object-fit:contain}
+  .vid-lb-close{position:fixed;top:18px;right:22px;font-size:2rem;color:var(--bone);cursor:pointer;
+    background:none;border:none;line-height:1;z-index:301}
+  @media(max-width:820px){.vid-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.vid-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 </style>
 </head>
 <body>
@@ -341,6 +362,7 @@
         <a href="#nutrition">Nutrition</a>
         <a href="#calc">Calculator</a>
         <a href="#tracker">Tracker</a>
+        <a href="#videos">Videos</a>
         <a href="#glossary">Glossary</a>
       </nav>
       <button class="printbtn" onclick="window.print()">Print / Save PDF · اطبع</button>
@@ -1061,6 +1083,45 @@
         <h2>Glossary<span class="ar">قاموس</span></h2>
       </div>
       <dl class="glossary" id="gloss"></dl>
+    </div>
+  </section>
+
+  <!-- PINTEREST VIDEO GALLERY -->
+  <section id="videos" class="vid-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Saved workouts · فيديوهات محفوظة</span>
+        <h2>Video gallery<span class="ar">معرض الفيديوهات</span></h2>
+        <p>Workout videos saved from Pinterest. Tap any to watch full-screen.</p>
+        <p class="ar" dir="rtl">فيديوهات تمارين محفوظة من بينتريست. اضغط على أي فيديو لمشاهدته بشاشة كاملة.</p>
+      </div>
+      <div class="vid-grid" id="vidGrid">
+        <div class="vid-card" onclick="openVid('videos/pin01.mp4')"><video src="videos/pin01.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">01</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin02.mp4')"><video src="videos/pin02.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">02</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin03.mp4')"><video src="videos/pin03.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">03</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin04.mp4')"><video src="videos/pin04.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">04</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin05.mp4')"><video src="videos/pin05.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">05</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin06.mp4')"><video src="videos/pin06.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">06</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin07.mp4')"><video src="videos/pin07.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">07</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin08.mp4')"><video src="videos/pin08.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">08</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin09.mp4')"><video src="videos/pin09.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">09</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin10.mp4')"><video src="videos/pin10.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">10</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin11.mp4')"><video src="videos/pin11.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">11</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin12.mp4')"><video src="videos/pin12.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">12</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin13.mp4')"><video src="videos/pin13.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">13</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin14.mp4')"><video src="videos/pin14.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">14</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin15.mp4')"><video src="videos/pin15.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">15</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin16.mp4')"><video src="videos/pin16.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">16</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin17.mp4')"><video src="videos/pin17.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">17</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin18.mp4')"><video src="videos/pin18.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">18</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin19.mp4')"><video src="videos/pin19.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">19</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+        <div class="vid-card" onclick="openVid('videos/pin20.mp4')"><video src="videos/pin20.mp4" muted loop playsinline preload="metadata"></video><span class="vid-num">20</span><div class="vid-play"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(0,0,0,.5)"/><polygon points="24,18 46,30 24,42" fill="#C6FF00"/></svg></div></div>
+      </div>
+    </div>
+    <!-- Video lightbox -->
+    <div class="vid-lb" id="vidLb" onclick="closeVid()">
+      <button class="vid-lb-close" onclick="closeVid()" aria-label="Close">✕</button>
+      <video id="vidLbVid" controls autoplay playsinline style="background:#000"></video>
     </div>
   </section>
 
@@ -1854,6 +1915,27 @@
     return '<details class="libgroup"><summary><span>'+g.en+' <span class="ar">'+g.ar+'</span></span><span class="cnt">'+g.ex.length+' moves</span></summary><div class="libbody">'+items+'</div></details>';
   }).join('');
   initMotions();
+  function openVid(src){
+    var lb=document.getElementById('vidLb');
+    var v=document.getElementById('vidLbVid');
+    v.src=src; v.play();
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeVid(){
+    var lb=document.getElementById('vidLb');
+    var v=document.getElementById('vidLbVid');
+    v.pause(); v.src='';
+    lb.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.getElementById('vidLb').addEventListener('click',function(e){if(e.target===this)closeVid();});
+  // hover-preview on desktop
+  document.querySelectorAll('.vid-card').forEach(function(card){
+    var v=card.querySelector('video');
+    card.addEventListener('mouseenter',function(){v.play();});
+    card.addEventListener('mouseleave',function(){v.pause();v.currentTime=0;});
+  });
   function openLB(src){var lb=document.getElementById('lb');document.getElementById('lb-img').src=src;lb.classList.add('open');document.body.style.overflow='hidden';}
   function closeLB(){var lb=document.getElementById('lb');lb.classList.remove('open');document.body.style.overflow='';document.getElementById('lb-img').src='';}
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
