@@ -229,6 +229,99 @@
     .tracker input{border-bottom:1px solid #999}
     .ex h3 .ar,.week>summary .ar,th .ar,.term dt .ar,.principle h3 .ar,.panel .plabel .ar{color:#111!important}
   }
+  /* ---- SPLITS & PROGRAMS ---- */
+  .sub-h{font-family:"Archivo";font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.14em;color:var(--muted);margin-bottom:16px}
+  .sub-h .ar{font-family:"Noto Kufi Arabic";text-transform:none;color:var(--volt);font-weight:700;font-size:.8rem;margin-right:6px;display:inline}
+  .split-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+  .split-col{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .sc-header{padding:18px 20px}
+  .sc-ppl{background:rgba(198,255,0,.06);border-bottom:2px solid var(--volt)}
+  .sc-ul{background:rgba(255,45,85,.06);border-bottom:2px solid var(--heat)}
+  .sc-label{font-family:"Anton";font-size:2.2rem;line-height:1;display:block}
+  .sc-ppl .sc-label{color:var(--volt)}
+  .sc-ul .sc-label{color:var(--heat)}
+  .sc-name{font-family:"Archivo";font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.03em;margin-top:4px}
+  .sc-days{font-size:.8rem;color:var(--muted);margin-top:4px;font-family:"Archivo";font-weight:600}
+  .sc-body{padding:14px 20px}
+  .sc-day{font-family:"Archivo";font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+    padding:8px 12px;border-radius:4px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .sc-day span{font-weight:500;font-size:.7rem;color:var(--muted);text-transform:none;letter-spacing:0;text-align:right}
+  .d-push{background:rgba(198,255,0,.1);color:var(--volt)}
+  .d-pull{background:rgba(255,45,85,.1);color:var(--heat)}
+  .d-legs{background:rgba(91,200,251,.12);color:#5bc8fb}
+  .d-rest{background:var(--surface);color:var(--muted)}
+  .d-upper{background:rgba(176,126,248,.12);color:#b07ef8}
+  .d-lower{background:rgba(74,227,154,.12);color:#4ae39a}
+  .sc-pros{margin:14px 0 10px;display:grid;gap:4px}
+  .sc-pro{font-size:.84rem;color:var(--muted);padding:4px 0 4px 18px;position:relative}
+  .sc-pro::before{content:"✓";position:absolute;left:0;color:var(--volt);font-weight:700}
+  .sc-best{font-family:"Archivo";font-weight:800;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+    padding-top:10px;border-top:1px solid var(--line)}
+  .sc-ppl .sc-best{color:var(--volt)}
+  .sc-ul .sc-best{color:var(--heat)}
+  .day-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+  .day-card{background:#0D0D0F;border:1px solid var(--line);border-radius:8px;overflow:hidden;break-inside:avoid}
+  .dc-head{font-family:"Archivo";font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;
+    padding:10px 12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:52px}
+  .dc-num{font-family:"Anton";font-size:1.6rem;color:var(--volt);line-height:1;flex-shrink:0}
+  .dc-ar{font-family:"Noto Kufi Arabic";font-weight:700;text-transform:none;color:var(--muted);font-size:.7rem;letter-spacing:0;width:100%;margin-top:1px}
+  .dc-sub{font-weight:500;color:var(--muted);text-transform:none;letter-spacing:0;font-size:.66rem;width:100%;margin-top:1px}
+  .dc-push .dc-head{border-bottom:2px solid var(--volt);background:rgba(198,255,0,.05)}
+  .dc-pull .dc-head{border-bottom:2px solid var(--heat);background:rgba(255,45,85,.05)}
+  .dc-legs .dc-head{border-bottom:2px solid #5bc8fb;background:rgba(91,200,251,.05)}
+  .dc-rest .dc-head{border-bottom:1px solid var(--line)}
+  .dc-upper .dc-head{border-bottom:2px solid #b07ef8;background:rgba(176,126,248,.05)}
+  .dc-lower .dc-head{border-bottom:2px solid #4ae39a;background:rgba(74,227,154,.05)}
+  .day-card table{font-size:.8rem}
+  .day-card td,.day-card th{padding:6px 12px}
+  .rest-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 16px;
+    font-family:"Archivo";font-weight:600;font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .ppl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+  .ppl-h{font-family:"Archivo";font-weight:900;text-transform:uppercase;font-size:1.05rem;letter-spacing:.06em;
+    padding-bottom:10px;margin-bottom:12px;border-bottom:2px solid}
+  .ppl-h span{display:block;font-weight:500;text-transform:none;letter-spacing:0;font-size:.76rem;color:var(--muted);margin-top:4px}
+  .push-h{color:var(--volt);border-color:var(--volt)}
+  .pull-h{color:var(--heat);border-color:var(--heat)}
+  .legs-h{color:#5bc8fb;border-color:#5bc8fb}
+  .week-sched{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}
+  .ws-item{font-family:"Archivo";font-weight:700;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;
+    padding:7px 12px;border-radius:4px;white-space:nowrap}
+  .dc-bi{background:rgba(230,126,34,.12);color:#e67e22}
+  .ex-list-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+  .elg-col{border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+  .elg-head{font-family:"Archivo";font-weight:800;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+    padding:9px 12px;color:#fff}
+  .elg-list{list-style:decimal;margin:0;padding:10px 10px 10px 28px;background:var(--surface)}
+  .elg-list li{font-size:.8rem;color:var(--muted);padding:5px 0;border-bottom:1px solid var(--line)}
+  .elg-list li:last-child{border-bottom:none;padding-bottom:0}
+  .macro-box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-top:14px}
+  .mb-title{font-family:"Archivo";font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:.1em;color:var(--volt);margin-bottom:12px}
+  .mb-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .mb-label{font-family:"Archivo";font-weight:700;font-size:.72rem;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+  .mb-vals{display:flex;flex-direction:column;gap:4px}
+  .mb-vals span{font-size:.84rem;color:var(--bone);padding:4px 10px;background:rgba(198,255,0,.04);border-left:2px solid var(--volt);border-radius:0 2px 2px 0}
+  .tip-note{color:var(--muted);font-size:.82rem;background:rgba(198,255,0,.05);border-left:2px solid var(--volt);
+    padding:10px 14px;border-radius:0 4px 4px 0;margin-top:12px}
+  .poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:8px}
+  .poster-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);cursor:pointer;
+    transition:border-color .2s,transform .2s;break-inside:avoid}
+  .poster-card:hover{border-color:var(--volt);transform:translateY(-3px)}
+  .poster-card img{width:100%;height:260px;object-fit:cover;object-position:top;display:block}
+  .poster-card figcaption{font-family:"Archivo";font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+    padding:9px 14px;color:var(--muted)}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;display:none;align-items:center;
+    justify-content:center;padding:24px;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(90vw,700px);max-height:90vh;border-radius:8px;object-fit:contain}
+  @media(max-width:820px){
+    .split-compare,.ppl-grid{grid-template-columns:1fr}
+    .day-grid{grid-template-columns:1fr 1fr}
+    .ex-list-grid{grid-template-columns:repeat(2,1fr)}
+    .poster-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:540px){
+    .day-grid,.ex-list-grid,.poster-grid,.mb-grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -244,6 +337,7 @@
         <a href="#library">Library</a>
         <a href="#bodytypes">Body types</a>
         <a href="#plans">Plans</a>
+        <a href="#splits">Splits</a>
         <a href="#nutrition">Nutrition</a>
         <a href="#calc">Calculator</a>
         <a href="#tracker">Tracker</a>
@@ -445,6 +539,358 @@
           </div>
         </details>
       </div>
+    </div>
+  </section>
+
+  <!-- SPLITS & PROGRAMS -->
+  <section id="splits">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Find your fit · اختار تقسيمتك</span>
+        <h2>Splits &amp; programs<span class="ar">التقسيمات والبرامج</span></h2>
+        <p>Six proven templates — from 3 days to 6 days, beginner to advanced. Pick the one that fits your schedule, commit to it for 8–12 weeks, then reassess.</p>
+        <p class="ar" dir="rtl">ست قوالب مجربة — من ٣ أيام لـ ٦ أيام، للمبتدئ وللمتقدم. اختار اللي يناسب جدولك، والتزم بيه ٨–١٢ أسبوع قبل ما تغيّر.</p>
+      </div>
+
+      <p class="sub-h">Which split is right for you? <span class="ar">أنهي تقسيمة الأنسب لك؟</span></p>
+      <div class="split-compare">
+        <div class="split-col">
+          <div class="sc-header sc-ppl">
+            <span class="sc-label">PPL</span>
+            <div class="sc-name">Push · Pull · Legs</div>
+            <div class="sc-days">3–6 days / week</div>
+          </div>
+          <div class="sc-body">
+            <div class="sc-day d-push">MON · PUSH <span>Chest · Shoulders · Triceps</span></div>
+            <div class="sc-day d-pull">TUE · PULL <span>Back · Biceps · Rear Delts</span></div>
+            <div class="sc-day d-legs">WED · LEGS <span>Quads · Hams · Calves · Glutes</span></div>
+            <div class="sc-day d-rest">THU · REST <span>Active recovery</span></div>
+            <div class="sc-day d-push">FRI · PUSH</div>
+            <div class="sc-day d-pull">SAT · PULL</div>
+            <div class="sc-day d-legs">SUN · LEGS</div>
+            <div class="sc-pros">
+              <div class="sc-pro">Each muscle hit 2× per week</div>
+              <div class="sc-pro">High volume per session</div>
+              <div class="sc-pro">Flexible 3-day or 6-day format</div>
+            </div>
+            <div class="sc-best">Best for: Intermediate → Advanced · للمتوسط والمتقدم</div>
+          </div>
+        </div>
+        <div class="split-col">
+          <div class="sc-header sc-ul">
+            <span class="sc-label">U/L</span>
+            <div class="sc-name">Upper · Lower</div>
+            <div class="sc-days">4 days / week</div>
+          </div>
+          <div class="sc-body">
+            <div class="sc-day d-upper">MON · UPPER <span>Chest · Back · Shoulders · Arms</span></div>
+            <div class="sc-day d-lower">TUE · LOWER <span>Quads · Hams · Calves · Glutes</span></div>
+            <div class="sc-day d-rest">WED · REST</div>
+            <div class="sc-day d-upper">THU · UPPER</div>
+            <div class="sc-day d-lower">FRI · LOWER</div>
+            <div class="sc-day d-rest">SAT · REST</div>
+            <div class="sc-day d-rest">SUN · REST</div>
+            <div class="sc-pros">
+              <div class="sc-pro">Each muscle hit 2× weekly</div>
+              <div class="sc-pro">Higher frequency = faster skill</div>
+              <div class="sc-pro">Balanced strength &amp; volume</div>
+            </div>
+            <div class="sc-best">Best for: Beginner → Advanced · للمبتدئ وللمتقدم</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub-h">Full program templates <span class="ar">قوالب برامج كاملة</span></p>
+
+      <!-- 6-DAY WEEKLY PLAN -->
+      <details class="week" open>
+        <summary><span>6-Day Weekly Split <span class="ar">تقسيمة ٦ أيام</span></span><span class="pill gym">6 days/wk</span></summary>
+        <div class="day">
+          <div class="day-grid">
+            <div class="day-card dc-push">
+              <div class="dc-head"><span class="dc-num">01</span>MON · CHEST + TRICEPS<span class="dc-ar">صدر + تراي</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Bench Press</td><td class="sets">4 × 8–10</td></tr>
+                <tr><td>Incline Dumbbell Press</td><td class="sets">4 × 10</td></tr>
+                <tr><td>Cable Fly</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Push-Ups</td><td class="sets">2 × failure</td></tr>
+                <tr><td>Rope Pushdown</td><td class="sets">4 × 12</td></tr>
+                <tr><td>Skull Crushers</td><td class="sets">3 × 10</td></tr>
+                <tr><td>Overhead DB Extension</td><td class="sets">3 × 12</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-pull">
+              <div class="dc-head"><span class="dc-num">02</span>TUE · BACK + BICEPS<span class="dc-ar">ظهر + باي</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Lat Pulldown</td><td class="sets">4 × 10</td></tr>
+                <tr><td>Barbell Row</td><td class="sets">4 × 8–10</td></tr>
+                <tr><td>Seated Cable Row</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Deadlift</td><td class="sets">3 × 5</td></tr>
+                <tr><td>Barbell Curl</td><td class="sets">4 × 10</td></tr>
+                <tr><td>Incline DB Curl</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Hammer Curl</td><td class="sets">3 × 12</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-rest">
+              <div class="dc-head"><span class="dc-num">03</span>WED · FOREARMS + ABS + LIGHT SHOULDERS<span class="dc-ar">ساعد + بطن + كتف خفيف</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Wrist Curl</td><td class="sets">3 × 15–20</td></tr>
+                <tr><td>Reverse Wrist Curl</td><td class="sets">3 × 15–20</td></tr>
+                <tr><td>Reverse Curl</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Leg Raises</td><td class="sets">3 × 15</td></tr>
+                <tr><td>Crunches</td><td class="sets">3 × 20</td></tr>
+                <tr><td>Plank</td><td class="sets">3 × 45 s</td></tr>
+                <tr><td>DB Lateral Raise</td><td class="sets">3 × 15</td></tr>
+                <tr><td>Face Pull</td><td class="sets">3 × 15</td></tr>
+                <tr><td>Light DB Press</td><td class="sets">3 × 12</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-push">
+              <div class="dc-head"><span class="dc-num">04</span>THU · CHEST + TRICEPS VARIATION<span class="dc-ar">صدر + تراي (نسخة ثانية)</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Incline Bench Press</td><td class="sets">4 × 8–10</td></tr>
+                <tr><td>Flat Dumbbell Press</td><td class="sets">4 × 10</td></tr>
+                <tr><td>Chest Machine Press</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Dips</td><td class="sets">2 × failure</td></tr>
+                <tr><td>Close-Grip Bench</td><td class="sets">4 × 8</td></tr>
+                <tr><td>Rope Pushdown</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Cable Overhead Extension</td><td class="sets">3 × 12</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-pull">
+              <div class="dc-head"><span class="dc-num">05</span>FRI · BACK + BICEPS VARIATION<span class="dc-ar">ظهر + باي (نسخة ثانية)</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Pull-Ups / Assisted</td><td class="sets">4 sets</td></tr>
+                <tr><td>T-Bar Row</td><td class="sets">4 × 10</td></tr>
+                <tr><td>One-Arm Dumbbell Row</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Straight-Arm Pulldown</td><td class="sets">3 × 12</td></tr>
+                <tr><td>EZ Bar Curl</td><td class="sets">4 × 10</td></tr>
+                <tr><td>Preacher Curl</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Hammer Curl</td><td class="sets">3 × 12</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-legs">
+              <div class="dc-head"><span class="dc-num">06</span>SAT · LEGS + HEAVY SHOULDERS<span class="dc-ar">أرجل + كتف ثقيل</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Squats</td><td class="sets">4 × 8–10</td></tr>
+                <tr><td>Leg Press</td><td class="sets">4 × 12</td></tr>
+                <tr><td>Romanian Deadlift</td><td class="sets">3 × 10</td></tr>
+                <tr><td>Walking Lunges</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Leg Curl</td><td class="sets">3 × 12</td></tr>
+                <tr><td>Calf Raises</td><td class="sets">4 × 20</td></tr>
+                <tr><td>Shoulder Press</td><td class="sets">4 × 8–10</td></tr>
+                <tr><td>DB Lateral Raise</td><td class="sets">4 × 15</td></tr>
+                <tr><td>Rear Delt Fly</td><td class="sets">4 × 15</td></tr>
+                <tr><td>Shrugs</td><td class="sets">4 × 15</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+          <div class="rest-card">
+            <span class="dc-num" style="color:var(--muted)">07</span>
+            SUN · REST — Stretching &nbsp;·&nbsp; High-protein meals &nbsp;·&nbsp; Sleep 7–9 h
+            <span class="ar" dir="rtl" style="width:100%">الأحد: راحة — تمطيط · أكل بروتين عالي · نوم ٧–٩ ساعات</span>
+          </div>
+        </div>
+      </details>
+
+      <!-- CLASSIC PPL -->
+      <details class="week">
+        <summary><span>Push / Pull / Legs — Classic <span class="ar">دفع / سحب / أرجل الكلاسيكي</span></span><span class="pill gym">3–6 days</span></summary>
+        <div class="day">
+          <div class="ppl-grid">
+            <div>
+              <h4 class="ppl-h push-h">PUSH <span>Chest · Shoulders · Triceps</span></h4>
+              <table><thead><tr><th>#</th><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>1</td><td>Barbell Bench Press</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>2</td><td>Incline Dumbbell Press</td><td class="sets">3 × 8–12</td></tr>
+                <tr><td>3</td><td>Shoulder Press</td><td class="sets">3 × 8–12</td></tr>
+                <tr><td>4</td><td>Lateral Raises</td><td class="sets">3 × 12–15</td></tr>
+                <tr><td>5</td><td>Rope Pushdown</td><td class="sets">3 × 10–15</td></tr>
+                <tr><td>6</td><td>OHD Triceps Extension</td><td class="sets">3 × 10–15</td></tr>
+              </tbody></table>
+            </div>
+            <div>
+              <h4 class="ppl-h pull-h">PULL <span>Back · Biceps · Rear Delts</span></h4>
+              <table><thead><tr><th>#</th><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>1</td><td>Pull-Ups</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>2</td><td>Barbell Row</td><td class="sets">4 × 8–12</td></tr>
+                <tr><td>3</td><td>Lat Pulldown</td><td class="sets">3 × 8–12</td></tr>
+                <tr><td>4</td><td>Seated Cable Row</td><td class="sets">3 × 10–15</td></tr>
+                <tr><td>5</td><td>Barbell Curl</td><td class="sets">3 × 10–15</td></tr>
+                <tr><td>6</td><td>Hammer Curl</td><td class="sets">3 × 10–15</td></tr>
+              </tbody></table>
+            </div>
+            <div>
+              <h4 class="ppl-h legs-h">LEGS <span>Quads · Hams · Calves · Glutes</span></h4>
+              <table><thead><tr><th>#</th><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>1</td><td>Barbell Squat</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>2</td><td>Leg Press</td><td class="sets">4 × 8–12</td></tr>
+                <tr><td>3</td><td>Leg Extension</td><td class="sets">3 × 10–15</td></tr>
+                <tr><td>4</td><td>Leg Curl</td><td class="sets">3 × 10–15</td></tr>
+                <tr><td>5</td><td>Standing Calf Raise</td><td class="sets">4 × 12–20</td></tr>
+                <tr><td>6</td><td>Seated Calf Raise</td><td class="sets">3 × 12–20</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+          <div class="week-sched">
+            <div class="ws-item d-push">MON · PUSH</div>
+            <div class="ws-item d-pull">TUE · PULL</div>
+            <div class="ws-item d-legs">WED · LEGS</div>
+            <div class="ws-item d-rest">THU · REST</div>
+            <div class="ws-item d-push">FRI · PUSH</div>
+            <div class="ws-item d-pull">SAT · PULL</div>
+            <div class="ws-item d-legs">SUN · LEGS</div>
+          </div>
+          <p class="tip-note">Pro tips: Progressive overload every session · Maintain form on every rep · Eat in a calorie surplus with enough protein · Sleep 7–9 h for recovery</p>
+        </div>
+      </details>
+
+      <!-- 5-DAY PPL + UPPER/LOWER -->
+      <details class="week">
+        <summary><span>5-Day Push / Pull / Legs / Upper / Lower <span class="ar">٥ أيام</span></span><span class="pill gym">5–6 days</span></summary>
+        <div class="day">
+          <div class="day-grid">
+            <div class="day-card dc-push">
+              <div class="dc-head"><span class="dc-num">1</span>PUSH<span class="dc-sub">Chest / Shoulders / Triceps</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Chest Press (Machine)</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>Shoulder Press</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>Assisted Dips</td><td class="sets">3 × 8–12</td></tr>
+                <tr><td>Lateral Raises</td><td class="sets">3 × 12–15</td></tr>
+                <tr><td>Tricep Pushdowns</td><td class="sets">3–4 × 10–15</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-pull">
+              <div class="dc-head"><span class="dc-num">2</span>PULL<span class="dc-sub">Back / Biceps</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Assisted Pull-Ups</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>Seated Rows</td><td class="sets">4 × 8–12</td></tr>
+                <tr><td>Standing Rows</td><td class="sets">3 × 8–12</td></tr>
+                <tr><td>Bicep Curls</td><td class="sets">3–4 × 10–15</td></tr>
+                <tr><td>Rear Delt Fly</td><td class="sets">3 × 12–15</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-legs">
+              <div class="dc-head"><span class="dc-num">3</span>LEGS</div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Leg Press or Squats</td><td class="sets">4 × 6–10</td></tr>
+                <tr><td>Leg Extensions</td><td class="sets">3–4 × 10–15</td></tr>
+                <tr><td>Hamstring Curls</td><td class="sets">3–4 × 10–15</td></tr>
+                <tr><td>Calf Extensions</td><td class="sets">4 × 12–20</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-upper">
+              <div class="dc-head"><span class="dc-num">4</span>UPPER<span class="dc-sub">Volume / Pump</span></div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Chest Press (Machine)</td><td class="sets">3 × 10–12</td></tr>
+                <tr><td>Rows (Seated or Cable)</td><td class="sets">3 × 10–12</td></tr>
+                <tr><td>Shoulder Press</td><td class="sets">3 × 10–12</td></tr>
+                <tr><td>Biceps + Triceps Superset</td><td class="sets">3 each × 10–15</td></tr>
+                <tr><td>Lateral Raises</td><td class="sets">3 × 15</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-lower">
+              <div class="dc-head"><span class="dc-num">5</span>LOWER + CORE</div>
+              <table><thead><tr><th>Exercise</th><th>Sets × Reps</th></tr></thead><tbody>
+                <tr><td>Leg Press or Hack Squat</td><td class="sets">4 × 10–12</td></tr>
+                <tr><td>Hamstring Curls</td><td class="sets">3 × 12–15</td></tr>
+                <tr><td>Leg Extensions</td><td class="sets">3 × 12–15</td></tr>
+                <tr><td>Calf Extensions</td><td class="sets">4 × 15–20</td></tr>
+                <tr><td>Core Work</td><td class="sets">3 × 12–20</td></tr>
+              </tbody></table>
+            </div>
+            <div class="day-card dc-rest">
+              <div class="dc-head"><span class="dc-num">6</span>OPTIONAL — Arms &amp; Shoulders pump day or light full upper</div>
+            </div>
+          </div>
+          <div class="macro-box">
+            <div class="mb-title">Macro targets · أهداف الماكرو</div>
+            <div class="mb-grid">
+              <div>
+                <div class="mb-label">Training Days</div>
+                <div class="mb-vals">
+                  <span>2,400 – 2,600 cal</span>
+                  <span>Protein 210–220 g</span>
+                  <span>Carbs 230–260 g</span>
+                  <span>Fat 55–65 g</span>
+                </div>
+              </div>
+              <div>
+                <div class="mb-label">Rest Days</div>
+                <div class="mb-vals">
+                  <span>2,200 – 2,300 cal</span>
+                  <span>Protein 210–220 g</span>
+                  <span>Carbs 150–180 g</span>
+                  <span>Fat 65–75 g</span>
+                </div>
+              </div>
+            </div>
+            <p style="color:var(--muted);font-size:.82rem;margin-top:10px">Key rules: Progressive overload · Train close to failure · Control your reps · Consistency is everything</p>
+          </div>
+        </div>
+      </details>
+
+      <!-- SINGLE BODY PART -->
+      <details class="week">
+        <summary><span>Single Body Part — Classic Bro Split <span class="ar">كل يوم عضلة واحدة</span></span><span class="pill gym">6 days</span></summary>
+        <div class="day">
+          <div class="ex-list-grid">
+            <div class="elg-col"><div class="elg-head" style="background:#c0392b">CHEST</div>
+              <ol class="elg-list"><li>Barbell Bench Press</li><li>Incline Dumbbell Press</li><li>Decline Bench Press</li><li>Chest Fly (Machine/DB)</li><li>Cable Crossover</li><li>Push-Ups</li></ol></div>
+            <div class="elg-col"><div class="elg-head" style="background:#2980b9">BACK</div>
+              <ol class="elg-list"><li>Lat Pulldown</li><li>Pull-Ups</li><li>Barbell Deadlift</li><li>Seated Cable Row</li><li>T-Bar Row</li><li>One-Arm Dumbbell Row</li></ol></div>
+            <div class="elg-col"><div class="elg-head" style="background:#27ae60">LEGS</div>
+              <ol class="elg-list"><li>Barbell Squats</li><li>Leg Press</li><li>Lunges</li><li>Leg Extension</li><li>Leg Curl</li><li>Calf Raises</li></ol></div>
+            <div class="elg-col"><div class="elg-head" style="background:#8e44ad">SHOULDERS</div>
+              <ol class="elg-list"><li>Overhead Press (BB/DB)</li><li>Lateral Raises</li><li>Front Raises</li><li>Rear Delt Fly</li><li>Shrugs</li></ol></div>
+            <div class="elg-col"><div class="elg-head" style="background:#d35400">BICEPS</div>
+              <ol class="elg-list"><li>Barbell Curl</li><li>Dumbbell Curl</li><li>Hammer Curl</li><li>Preacher Curl</li><li>Cable Curl</li></ol></div>
+            <div class="elg-col"><div class="elg-head" style="background:#16a085">TRICEPS</div>
+              <ol class="elg-list"><li>Triceps Pushdown</li><li>Skull Crushers</li><li>Dips</li><li>OHD Triceps Extension</li><li>Close-Grip Bench Press</li></ol></div>
+            <div class="elg-col"><div class="elg-head" style="background:#2c3e50">ABS</div>
+              <ol class="elg-list"><li>Crunches</li><li>Leg Raises</li><li>Hanging Leg Raises</li><li>Plank</li><li>Russian Twist</li></ol></div>
+          </div>
+          <div class="week-sched">
+            <div class="ws-item d-push">MON · CHEST</div>
+            <div class="ws-item d-pull">TUE · BACK</div>
+            <div class="ws-item d-upper">WED · SHOULDERS</div>
+            <div class="ws-item d-legs">THU · LEGS</div>
+            <div class="ws-item dc-bi">FRI · BICEPS + TRICEPS</div>
+            <div class="ws-item d-rest">SAT · ABS + CARDIO</div>
+            <div class="ws-item d-rest">SUN · REST</div>
+          </div>
+        </div>
+      </details>
+
+      <!-- POSTER GALLERY -->
+      <p class="sub-h" style="margin-top:40px">Reference posters <span class="ar">ملصقات مرجعية</span></p>
+      <div class="poster-grid">
+        <figure class="poster-card" onclick="openLB(this.querySelector('img').src)">
+          <img src="img/split-compare.jpg" alt="PPL vs Upper/Lower split comparison" loading="lazy">
+          <figcaption>Split comparison · PPL vs Upper/Lower</figcaption>
+        </figure>
+        <figure class="poster-card" onclick="openLB(this.querySelector('img').src)">
+          <img src="img/weekly-plan.jpg" alt="6-day weekly workout plan" loading="lazy">
+          <figcaption>6-day weekly plan</figcaption>
+        </figure>
+        <figure class="poster-card" onclick="openLB(this.querySelector('img').src)">
+          <img src="img/ppl-split.jpg" alt="Push Pull Legs split" loading="lazy">
+          <figcaption>Push · Pull · Legs split</figcaption>
+        </figure>
+        <figure class="poster-card" onclick="openLB(this.querySelector('img').src)">
+          <img src="img/6day-plan.jpg" alt="6-day Be Great workout plan" loading="lazy">
+          <figcaption>6-day Be Great plan</figcaption>
+        </figure>
+        <figure class="poster-card" onclick="openLB(this.querySelector('img').src)">
+          <img src="img/exercise-list.jpg" alt="Single body part exercise list" loading="lazy">
+          <figcaption>Body-part exercise list</figcaption>
+        </figure>
+        <figure class="poster-card" onclick="openLB(this.querySelector('img').src)">
+          <img src="img/5day-split.jpg" alt="5-day workout split with macros" loading="lazy">
+          <figcaption>5-day split + macros</figcaption>
+        </figure>
+      </div>
+      <div class="lightbox" id="lb" onclick="closeLB()"><img id="lb-img" src="" alt=""></div>
     </div>
   </section>
 
@@ -1408,6 +1854,9 @@
     return '<details class="libgroup"><summary><span>'+g.en+' <span class="ar">'+g.ar+'</span></span><span class="cnt">'+g.ex.length+' moves</span></summary><div class="libbody">'+items+'</div></details>';
   }).join('');
   initMotions();
+  function openLB(src){var lb=document.getElementById('lb');document.getElementById('lb-img').src=src;lb.classList.add('open');document.body.style.overflow='hidden';}
+  function closeLB(){var lb=document.getElementById('lb');lb.classList.remove('open');document.body.style.overflow='';document.getElementById('lb-img').src='';}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
 </script>
 </body>
 </html>
