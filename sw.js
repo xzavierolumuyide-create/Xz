@@ -1,4 +1,4 @@
-const CACHE = 'volt-v1';
+const CACHE = 'volt-v2';
 const ASSETS = ['./volt-free-guide-FINAL.html', './manifest.json', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', e => {
