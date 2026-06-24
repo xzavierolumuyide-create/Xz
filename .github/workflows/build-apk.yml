@@ -18,20 +18,20 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Gradle 8.7
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.7'
-
       - name: Add Android SDK tools to PATH
         run: |
           echo "$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_PATH
           echo "$ANDROID_HOME/platform-tools" >> $GITHUB_PATH
 
-      - name: Accept Android SDK licenses and install components
+      - name: Install Android SDK components
         run: |
           yes | sdkmanager --licenses > /dev/null 2>&1 || true
           sdkmanager "platforms;android-34" "build-tools;34.0.0"
+
+      - name: Set up Gradle 8.7
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
 
       - name: Create local.properties
         working-directory: QuranTabarak
@@ -39,9 +39,20 @@ jobs:
 
       - name: Build Debug APK
         working-directory: QuranTabarak
-        run: gradle assembleDebug
+        run: |
+          gradle assembleDebug --no-daemon --stacktrace 2>&1 | tee /tmp/gradle-build.log
+          exit ${PIPESTATUS[0]}
+
+      - name: Upload build log (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-build-log
+          path: /tmp/gradle-build.log
+          retention-days: 7
 
       - name: Upload Debug APK
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: QuranTabarak-debug-apk
@@ -49,12 +60,7 @@ jobs:
           retention-days: 30
 
       - name: Report APK info
+        if: success()
         run: |
           APK=QuranTabarak/app/build/outputs/apk/debug/app-debug.apk
-          if [ -f "$APK" ]; then
-            echo "✓ APK built successfully"
-            ls -lh "$APK"
-          else
-            echo "✗ APK not found"
-            exit 1
-          fi
+          ls -lh "$APK"
